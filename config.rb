@@ -4,6 +4,12 @@ end
 
 activate :sprockets
 
+data.team.each do |key, team_member|
+  proxy "/team/#{key}.html", "/templates/show.html", locals: { team_member: team_member }
+end
+
+ignore "/templates/show.html.erb"
+
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false

@@ -1,0 +1,41 @@
+#dots-container {
+  z-index: 5;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 10px 0;
+  border: 3px solid $blue;
+  box-shadow: 0px 0px 0px 2px white;
+  transition: background-color 100ms ease;
+}
+
+.dot.active {
+  background-color: $blue;
+}
+
+@media (max-width: 500px) {
+  #dots-container {
+    display: flex;
+  }
+}
+
+
+@media (min-width: 500px) {
+  #dots-container {
+    display: none;
+  }
+}

@@ -1,17 +1,24 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Use the title from a page's frontmatter if it has one -->
-    <title><%= current_page.data.title %></title>
-    <%= stylesheet_link_tag "application" %>
-    <%= javascript_include_tag "application" %>
-    <%= favicon_tag 'images/favicon.png' %>
-  </head>
-  <body>
-    <%= yield %>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!-- Use the title from a page's frontmatter if it has one -->
+  <title><%= current_page.data.title %></title>
+  <%= stylesheet_link_tag "application" %>
+  <%= favicon_tag 'images/favicon.png' %>
+</head>
+<body>
+  <%= partial "shared/navbar" %>
+  <%= yield %>
+  <%= partial "shared/footer" %>
+  
+  <%= javascript_include_tag "application" %>
+  <% if content_for?(:after_js) %>
+  <%= yield_content :after_js %>
+  <% end %>
+</body>
 </html>

@@ -1,0 +1,165 @@
+
+.pages-home section, .pages-home .banner-wrapper {
+  scroll-snap-align: start;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  .section-content {
+    height: 80%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+section.default {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+section.red {
+  background-color: $red;
+}
+
+section.blue {
+  background-color: $blue;
+}
+
+.usp-container {
+  max-width: 900px;
+  margin: 0 auto;
+  .fas, .far {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 100px;
+    color: $yellow;
+    margin-bottom: 30px;
+  }
+}
+
+.usp-card {
+  .head {
+    height: 180px;
+  }
+  p {
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+    font-weight: 200;
+  }
+}
+
+
+.side-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .side-icon {
+    font-size: 200px;
+    color: #f23557;
+    margin: 50px 0;
+  }
+}
+
+.content-wrapper {
+  color: white;
+  max-width: 400px;
+}
+
+.illustration-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  img {
+    object-fit: contain;
+  }
+}
+
+.content-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h2 {
+    font-weight: 800;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  p {
+    max-width: 400px;
+    width: 100%;
+  }
+}
+
+.testimonial-center {
+  font-weight: 800;
+  margin-bottom: 20px;
+  margin-bottom: 50px;
+}
+
+.content-card.left {
+  text-align: right;
+  align-items: flex-end
+}
+
+.content-card.right {
+  text-align: left;
+  align-items: flex-start
+}
+
+@media (max-width: 500px) {
+  .section-content {
+    padding-top: 50px;
+  }
+  .content-card h2 {
+    font-size: 40px;
+    text-align: left;
+  }
+  .content-card {
+    padding-bottom: 200px;
+  }
+  .testimonial-center {
+    text-align: left;
+    font-size: 40px;
+  }
+  .illustration-wrapper img {
+    width: 100%;
+  }
+  .pages-home {
+    scroll-snap-type: y proximity;
+  }
+}
+
+
+@media (min-width: 500px) {
+  .content-card h2 {
+    font-size: 80px;
+  }
+  .testimonial-center {
+    text-align: center;
+    font-size: 80px;
+  }
+  .pages-home {
+    scroll-snap-type: y mandatory;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+  .illustration-wrapper img {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 769px) {
+  .illustration-wrapper img {
+    width: 100%;
+  }
+}
+
+

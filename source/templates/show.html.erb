@@ -1,0 +1,30 @@
+---
+title: The Conversation Playground - Team
+---
+
+<div class="team-bio-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-lg-8 col-lg-offset-2">
+        <%= link_to "< Back to overview", "/#team-section", class: "back-link"  %>
+        <div class="team-bio-card">
+          <div class="team-bio-head">
+            <%= image_tag team_member["image_url"], class: "team-avatar" %>
+          </div>
+          <div class="team-bio-body">
+            <h1 class="team-header">
+              <%= team_member["name"] %>
+            </h1>
+            <h2 class="team-sub-header">
+              <%= team_member["title"] %>
+            </h2>
+            <p>
+              <%= team_member["bio"] %>
+            </p>
+            <%= mail_to(team_member["email"], team_member["email"], class: "team-email") if team_member["email"] %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

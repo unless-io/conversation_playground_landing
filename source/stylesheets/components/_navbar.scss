@@ -1,12 +1,86 @@
-.navbar-lewagon {
+#regular-nav {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transition: opacity 200ms ease;
+  z-index: 9;
+}
+
+.navbar-custom {
+  display: flex;
   justify-content: space-between;
-  background: white;
+  align-items: center;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar-custom-center li {
+  display: inline-block;
+  padding: 0 20px;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-custom-center {
+  margin: 0;
 }
+
+.navbar-custom-item-extra span {
+  padding-right: 10px;
+}
+
+.navbar-custom-item {
+  font-weight: 600;
+  color: $blue;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.navbar-custom-item.active {
+  border-bottom: 6px solid $red;
+}
+
+.navbar-custom-item-extra {
+  background-color: $red;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+  border: 2px solid $red;
+  padding: 5px 10px;
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+#sticky-nav.hidden-up {
+  top: -66px;
+  opacity: 0;
+}
+
+#sticky-nav {
+  opacity: 1;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  transition: top 200ms ease;
+  .logo img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-custom .logo img {
+    width: 150px;
+  }
+}
+
+
+@media (min-width: 500px) {
+  .navbar-custom .logo img {
+    width: 250px;
+    margin-left: -50px;
+  }
+}
+

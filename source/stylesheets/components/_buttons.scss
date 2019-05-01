@@ -1,0 +1,84 @@
+.btn-brand {
+  background-color: $blue;
+  color: white;
+  padding: 10px 15px;
+  margin: 10px 0;
+  display: inline-block;
+  border: none;
+  &:hover, &:active, &:visited, &:focus {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.bubble-button-blue {
+  background-color: $blue;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  color: white;
+  border: 2px solid $blue;
+  padding: 5px 10px;
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.btn-plain {
+  text-decoration: underline;
+  padding: 10px 15px;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.button-container {
+  margin-top: 40px;
+}
+
+.button-next-container {
+  left: 0;
+  flex-direction: column;
+  height: 130px;
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    color: $blue;
+  }
+}
+
+.btn-next {
+  position: absolute;
+  bottom: 0;
+  font-size: 25px;
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  &:hover, &:active, &:visited, &:focus {
+    text-decoration: none;
+  }
+}
+
+.btn-next.blue {
+  border: 2px solid $blue;
+  color: $blue;
+}
+
+.btn-next.red {
+  border: 2px solid $red;
+  color: $red;
+}
+
+.btn-next.yellow {
+  border: 2px solid $yellow;
+  color: $yellow;
+}
+

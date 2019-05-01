@@ -1,15 +1,315 @@
 ---
-title: Le Wagon - Middleman
+title: The Conversation Playground - Home
 ---
 
-<div id="home">
-  <div class="home-content">
-    <%= image_tag "logo.png", width: "200" %>
+<div id="dots-container"></div>
+
+<div class="banner-wrapper">
+  <div class="banner container">
+    <div class="banner-content">
+      <h1>
+        Helping kids to confidently speak English since 2015
+      </h1>
+      <div class="descending-paragraph-container hidden-xs">
+        <p>
+          Want to learn grammar: Do grammar!
+        </p>
+        <p>
+          Want to write better: Do writing!
+        </p>
+        <p>
+          Want to speak better: Do...
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="banner-background">
+    <div class="banner-image" style="background-image:url('<%= image_path 'conversationplayground-header.png' %>');"></div>
+  </div>
+  <div class="button-next-container">
     <p>
-      Middleman is now running!
+      Find out more
     </p>
-    <p class="about">
-      <%= link_to "More about this template", "about.html" %>
-    </p>
+    <% link_to "#", class: "btn-next blue" do %>
+    <i class="fas fa-chevron-down"></i>
+    <% end %>
   </div>
 </div>
+
+<section class="default" data-target="#mission" id="mission-section">
+  <div class="container section-content">
+    <div class="row">
+      <div class="col-xs-12 col-lg-6">
+        <div class="content-card left">
+          <h2>
+            Preparing for the future
+          </h2>
+          <p class="text-left">
+            Our mission is to give workshops so fun, social and collaborative that the kids don't even realize they're learning. 
+          </p>
+          <p class="text-left">
+            How we do it:
+          </p>
+          <ul class="text-left">
+            <li>
+              converse in that language
+            </li>
+            <li>
+              think in that language
+            </li>
+            <li>
+              make it fun and social
+            </li>
+            <li>
+              be offline in a room with native speakers
+            </li>
+          </ul>
+          <p class="text-left">
+            Speaking is the foundation of learning languages.  It’s the way babies learn. By listening and then speaking.  Reading and writing comes later. 
+          </p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-lg-6">
+        <div class="illustration-wrapper">
+          <%= image_tag 'our-mission.png' %>
+        </div>
+      </div>
+    </div>
+    <div class="button-next-container">
+      <% link_to "#", class: "btn-next blue" do %>
+      <i class="fas fa-chevron-down"></i>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="default" data-target="#what" id="what-section">
+  <div class="container section-content">
+    <div class="row">
+      <div class="col-xs-12 col-lg-6">
+        <div class="illustration-wrapper">
+          <%= image_tag 'how.png' %>
+        </div>
+      </div>
+      <div class="col-xs-12 col-lg-6">
+        <div class="content-card right">
+          <h2>
+            We focus on speaking
+          </h2>
+
+          <p>
+            We’ve gathered together a selection of certified native English speaking teachers. We  armed them with a database of games that totally immerse the children in the English language. <strong>No Dutch can be spoken! </strong>
+          </p>
+          <p>
+            The games:
+          </p>
+          <ul>
+            <li>
+              Can be played in pairs or groups, depending on the game
+            </li>
+            <li>
+              The objective of each game is to get the pupils talking with each other and with the teacher  
+            </li>
+            <li>
+              <em>Commando</em> is an example of a game that establishes the level of comprehension and vocabulary
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <div class="button-next-container">
+      <% link_to "#", class: "btn-next blue" do %>
+      <i class="fas fa-chevron-down"></i>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="default" data-target="#program" id="program-section">
+  <div class="container section-content">
+    <div class="row">
+      <div class="col-xs-12 col-lg-6">
+        <div class="content-card left">
+          <h2>
+            Our program
+          </h2>
+          <div class="text-left">
+            <p>
+              Games oriented English language workshops for kids that already understand English (group 7 and 8)
+            </p>
+            <p>
+              In a world where everything is moving online, we go offline. The workshops would be held on your school premises
+            </p>
+            <p>
+              We create a safe environment where mistakes are allowed which will help kids smash through the wall that is linguistic insecurity
+            </p>
+            <p>
+              Practical information: 
+            </p>
+            <ul>
+              <li>
+                8 workshops
+              </li>
+              <li>
+                1 hour each
+              </li>
+              <li>
+                Minumum of 8 kids per workshop
+              </li>
+              <li>
+                <strong>Total costs €80.-</strong>
+              </li>
+            </ul>
+            <p>
+              (Detailed schedule to be determined by your school)
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-lg-6">
+        <div class="illustration-wrapper">
+          <%= image_tag 'smaller_illustration.png' %>
+        </div>
+      </div>
+    </div>
+    <div class="button-next-container">
+      <% link_to "#", class: "btn-next blue" do %>
+      <i class="fas fa-chevron-down"></i>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="default" data-target="#team" id="team-section">
+  <div class="container section-content">
+    <div class="row">
+      <div class="col-xs-12 col-lg-12">
+        <h2 class="testimonial-center">
+          Our team
+        </h2>
+      </div>
+      <div class="col-xs-12 col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="row team-wrapper">
+          <% data.team.each do |key, team_member| %>
+          <div class="col-xs-4 col-md-4 col-lg-4">
+            <% link_to "/team/#{key}.html", class: "team-card" do %>
+            <%= image_tag team_member["image_url"] %>
+            <h3>
+              <%= team_member["name"] %>
+            </h3>
+            <p>
+              <%= team_member["title"] %>
+            </p>
+            <% end %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="button-next-container">
+      <% link_to "#", class: "btn-next blue" do %>
+      <i class="fas fa-chevron-down"></i>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="default" data-target="#testimonials" id="testimonials-section">
+  <div class="container section-content">
+    <div class="row">
+      <div class="col-xs-12 col-lg-12">
+        <h2 class="testimonial-center">
+          What others say
+        </h2>
+      </div>
+      <div class="col-xs-12 col-lg-12">
+        <div class="testimonial-wrapper">
+          <% data.testimonials.each_with_index do |testimonial, index| %>
+          <div class="testimonial-card<%= ' active' if index == 0 %>" data-target="#dot-<%= index %>" id="testimonial-<%= index %>">
+            <div class="testimonial-avatar">
+              <%= image_tag testimonial["image_url"] %>
+            </div>
+            <div class="testimonial-body">
+              <p>
+                “<%= testimonial["content"] %>”
+              </p>
+              <div class="testimonial-author">
+                <span>
+                  - <%= testimonial["author"] %>.
+                </span>
+              </div>
+            </div>
+          </div>
+          <% end %>
+        </div>
+        <div class="testimonial-dots">
+          <% data.testimonials.length.times do |index| %>
+          <a href="#" class="testimonial-dot<%= ' active' if index == 0 %>" id="dot-<%= index %>" data-target="#testimonial-<%= index %>"></a>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="button-next-container">
+      <% link_to "#", class: "btn-next blue" do %>
+      <i class="fas fa-chevron-down"></i>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="default" data-target="#contact" id="contact-section">
+  <div class="container section-content">
+    <div class="row">
+      <div class="col-xs-12 col-lg-12">
+        <h2 class="testimonial-center">
+          Contact us
+        </h2>
+      </div>
+      <div class="col-xs-12 col-lg-6">
+        <div class="illustration-wrapper">
+          <%= image_tag 'contact.png' %>
+        </div>
+      </div>
+      <div class="col-xs-12 col-lg-6">
+        <div class="form-wrapper">
+          <form action="https://formspree.io/amardip@theconversationplayground.nl" method="POST" class="contact-form">
+            <div class="form-left">
+              <label for="name">
+                Name:
+              </label>
+              <input type="text" name="name" id="name" placeholder="John Doe" required>
+              <label for="email">
+                Email:
+              </label>
+              <input type="email" name="_replyto" placeholder="johndoe@gmail.com" required>
+            </div>
+            <div class="form-right">
+              <label for="content">
+                Your message:
+              </label>
+              <textarea name="content" id="content" cols="30" rows="10" placeholder="Hi, I'd like to contact you about.." required></textarea>
+              <input type="submit" class="btn-brand" value="Submit your message">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<% content_for :after_js do %>
+<script>
+  scrollToSection();
+  scrollDots();
+  activateNav();
+  scrollTestimonials();
+  document.querySelectorAll('.navbar-custom-item-extra').forEach(function(item) {
+    item.addEventListener('click', function(event) {
+      event.preventDefault();
+      const clickedLink = event.currentTarget;
+      document.querySelector(clickedLink.getAttribute('href')).scrollIntoView({behavior: "smooth"});
+    })
+  })
+  </script>
+<% end %>

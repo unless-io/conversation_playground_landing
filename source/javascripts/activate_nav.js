@@ -20,7 +20,14 @@ function activateNav() {
     item.addEventListener('click', function(event) {
       event.preventDefault();
       var clickedLink = event.currentTarget;
-      document.querySelector(clickedLink.getAttribute('href')).scrollIntoView({behavior: "smooth"});
+      document.querySelector(clickedLink.dataset.target).scrollIntoView({behavior: "smooth"});
+    })
+  })
+  document.querySelectorAll('.navbar-custom-item-extra').forEach(function(item) {
+    item.addEventListener('click', function(event) {
+      event.preventDefault();
+      const clickedLink = event.currentTarget;
+      document.querySelector(clickedLink.dataset.target).scrollIntoView({behavior: "smooth"});
     })
   })
 }

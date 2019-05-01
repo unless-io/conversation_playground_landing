@@ -36,22 +36,22 @@
     <% end %>
     <ul class="navbar-custom-center list-inline list-unstyled hidden-xs">
       <li>
-        <%= link_to "Our mission", "/#mission-section", class: 'navbar-custom-item', id: "mission"  %>
+        <%= link_to "Our mission", "/#mission-section", class: 'navbar-custom-item', id: "mission", "data-target" => "#mission-section"  %>
       </li>
       <li>
-        <%= link_to "What we do", "/#what-section", class: 'navbar-custom-item', id: "what"  %>
+        <%= link_to "What we do", "/#what-section", class: 'navbar-custom-item', id: "what", "data-target" => "#what-section"  %>
       </li>
       <li>
-        <%= link_to "Program", "/#program-section", class: 'navbar-custom-item', id: "program"  %>
+        <%= link_to "Program", "/#program-section", class: 'navbar-custom-item', id: "program", "data-target" => "#program-section"  %>
       </li>
       <li>
-        <%= link_to "Team", "/#team-section", class: 'navbar-custom-item', id: "team"  %>
+        <%= link_to "Team", "/#team-section", class: 'navbar-custom-item', id: "team", "data-target" => "#team-section"  %>
       </li>
       <li>
-        <%= link_to "Testimonials", "/#testimonials-section", class: 'navbar-custom-item', id: "testimonials"  %>
+        <%= link_to "Testimonials", "/#testimonials-section", class: 'navbar-custom-item', id: "testimonials", "data-target" => "#testimonials-section"  %>
       </li>
     </ul>
-    <% link_to "/#contact-section", class: 'navbar-custom-item-extra' do %>
+    <% link_to "/#contact-section", class: 'navbar-custom-item-extra', "data-target" => "#contact-section" do %>
     <span>
       Contact
     </span>

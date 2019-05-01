@@ -11,7 +11,7 @@
   <%= stylesheet_link_tag "application" %>
   <%= favicon_tag 'images/favicon.png' %>
 </head>
-<body>
+<body class="<%= current_page.data.body_class %>">
   <%= partial "shared/navbar" %>
   <%= yield %>
   <%= partial "shared/footer" %>

@@ -70,6 +70,12 @@
   }
 }
 
+@media (max-width: 767px) {
+  #regular-nav {
+    opacity: 1 !important;
+  }
+}
+
 @media (max-width: 500px) {
   .navbar-custom .logo img {
     width: 150px;

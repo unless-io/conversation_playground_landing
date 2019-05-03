@@ -22,6 +22,9 @@ title: The Conversation Playground - Team
               <%= team_member["bio"] %>
             </p>
             <%= mail_to(team_member["email"], team_member["email"], class: "team-email") if team_member["email"] %>
+            <p>
+              <%= team_member["phone"] if team_member["phone"] %>
+            </p>
           </div>
         </div>
       </div>

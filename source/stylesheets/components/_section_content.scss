@@ -15,11 +15,6 @@ section {
   }
 }
 
-section.default {
-  min-height: 100vh;
-  min-width: 100vw;
-}
-
 section.red {
   background-color: $red;
 }
@@ -123,6 +118,10 @@ section.blue {
 }
 
 @media (max-width: 500px) {
+  section.default {
+    min-height: 100vh;
+    min-width: 100vw;
+  }
   .section-content {
     padding-top: 50px;
   }
@@ -150,6 +149,8 @@ section.blue {
   section.default {
     padding-top: 66px;
     padding-bottom: 130px;
+    min-height: calc(100vh - 196px);
+    min-width: 100vw;
   }
   .content-card h2 {
     font-size: 50px;

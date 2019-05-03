@@ -115,6 +115,13 @@ section.blue {
   align-items: flex-start
 }
 
+#program-section {
+  .navbar-custom-item-extra {
+    margin-top: 20px;
+    display: inline-block;
+  }
+}
+
 @media (max-width: 500px) {
   .section-content {
     padding-top: 50px;

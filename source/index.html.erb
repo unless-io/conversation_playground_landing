@@ -36,7 +36,7 @@ body_class: pages-home
     <div class="row">
       <div class="col-xs-12 col-lg-6 col-lg-push-6">
         <div class="illustration-wrapper">
-          <%= image_tag 'our-mission.png' %>
+          <%= image_tag 'our-mission.png', class: "smaller-picture" %>
         </div>
       </div>
       <div class="col-xs-12 col-lg-6 col-lg-pull-6">
@@ -122,9 +122,12 @@ body_class: pages-home
             <p class="text-left">
               Het exacte schema wordt vastgesteld in samenwerking met de betreffende school.
             </p>
+            <p class="text-left">
+              Bent u een ouder of docent en heeft u interesse in de workshops? Neem dan contact op via de onderstaande knop.
+            </p>
             <% link_to "/#contact-section", class: 'navbar-custom-item-extra', "data-target" => "#contact-section" do %>
             <span>
-              Contact
+              Ik ben geïnteresseerd
             </span>
             <i class="fas fa-chevron-right"></i>
             <% end %>

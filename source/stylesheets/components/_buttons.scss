@@ -39,7 +39,6 @@
 .button-next-container {
   left: 0;
   flex-direction: column;
-  height: 130px;
   position: absolute;
   bottom: 40px;
   width: 100%;
@@ -80,5 +79,22 @@
 .btn-next.yellow {
   border: 2px solid $yellow;
   color: $yellow;
+}
+
+
+@media (max-width: 500px) {
+  .button-next-container {
+    height: 70px;
+    &.large {
+      height: 130px;
+    }
+  }
+}
+
+
+@media (min-width: 500px) {
+  .button-next-container {
+    height: 130px;
+  }
 }
 

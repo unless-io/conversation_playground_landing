@@ -147,7 +147,7 @@ body_class: pages-home
   <div class="container section-content">
     <div class="row">
       <div class="col-xs-12 col-lg-12">
-        <h2 class="testimonial-center">
+        <h2 class="testimonial-center text-center">
           Our team
         </h2>
       </div>
@@ -235,7 +235,7 @@ body_class: pages-home
       </div>
       <div class="col-xs-12 col-lg-6">
         <div class="illustration-wrapper">
-          <%= image_tag 'contact.png' %>
+          <%= image_tag 'contact.png', class: "negative-margin-top" %>
         </div>
       </div>
       <div class="col-xs-12 col-lg-6">
@@ -243,19 +243,19 @@ body_class: pages-home
           <form action="https://formspree.io/amardip@theconversationplayground.nl" method="POST" class="contact-form">
             <div class="form-left">
               <label for="name">
-                Naam:
+                
               </label>
-              <input type="text" name="name" id="name" placeholder="John Doe" required>
+              <input type="text" name="name" id="name" placeholder="Naam" required>
               <label for="email">
-                Email:
+                
               </label>
-              <input type="email" name="_replyto" placeholder="johndoe@gmail.com" required>
+              <input type="email" name="_replyto" placeholder="Email" required>
             </div>
             <div class="form-right">
               <label for="content">
-                Uw bericht:
+                
               </label>
-              <textarea name="content" id="content" cols="30" rows="10" placeholder="Hi, ik kom graag in contact over..." required></textarea>
+              <textarea name="content" id="content" cols="30" rows="10" placeholder="Hi!" required></textarea>
               <input type="submit" class="btn-brand" value="Verstuur">
             </div>
           </form>

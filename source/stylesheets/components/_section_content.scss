@@ -101,7 +101,7 @@ section.blue {
 .testimonial-center {
   font-weight: 600;
   margin-bottom: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .content-card.left {
@@ -131,13 +131,13 @@ section.blue {
   }
   .content-card h2 {
     font-size: 40px;
-    text-align: left;
+    text-align: center;
   }
   .content-card {
     padding-bottom: 200px;
   }
   .testimonial-center {
-    text-align: left;
+    text-align: center;
     font-size: 40px;
   }
   .illustration-wrapper img {
@@ -150,6 +150,9 @@ section.blue {
 
 
 @media (min-width: 500px) {
+  .negative-margin-top {
+    margin-top: -50px;
+  }
   section.default {
     padding-top: 66px;
     padding-bottom: 130px;

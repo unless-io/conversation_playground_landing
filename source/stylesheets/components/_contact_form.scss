@@ -42,16 +42,13 @@
     width: 100%;
     flex-direction: column;
   }
-  .form-wrapper {
-    padding-bottom: 200px;
-  }
 }
 
 
 @media (min-width: 500px) {
   .contact-form {
-    max-width: 700px;
-    min-width: 600px;
+    max-width: 100%;
+    min-width: 100%;
   }
   .contact-form .form-left, .contact-form .form-right {
     flex: 0 0 40%;

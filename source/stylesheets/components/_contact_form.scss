@@ -1,6 +1,7 @@
 .contact-form {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
 
 .form-wrapper {
@@ -54,9 +55,9 @@
     min-width: 100%;
   }
   .contact-form .form-left, .contact-form .form-right {
-    flex: 0 0 40%;
+    flex: 0 1 40%;
   }
   .contact-form .form-left {
-    margin-right: 10px;
+    margin-bottom: 10px;
   }
 }

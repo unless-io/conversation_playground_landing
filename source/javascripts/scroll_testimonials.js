@@ -56,7 +56,7 @@ function scrollTestimonials() {
         testimonial.classList.remove('active')
       })
       currentTestimonial.classList.add('active');
-      currentTestimonial.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
+      currentTestimonial.scrollIntoView({behavior: "smooth", block: "start", inline: "center"});
     })
   })
 

@@ -50,8 +50,19 @@ footer .copyright {
 }
 
 @media (max-width: 500px) {
-  footer ul {
-    margin-top: 20px;
+  footer { 
+    ul {
+      margin-top: 20px;
+      li {
+        margin-bottom: 10px;
+      }
+    }
+    .logo-wrapper {
+      justify-content: flex-start;
+      img {
+        margin-left: -20px;
+      }
+    }
   }
 }
 

@@ -28,7 +28,7 @@ function onIntersection(entries) {
   // Loop through the entries
   entries.forEach(function(entry) {
     // Are we in viewport?
-    if (entry.intersectionRatio > 0.5) {
+    if (entry.intersectionRatio > 0.3) {
       var dotIndex;
       allSections.forEach(function(item, index) { 
         if (item === entry.target) {

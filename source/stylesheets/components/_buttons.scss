@@ -66,6 +66,37 @@
   }
 }
 
+.btn-previous-container {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  color: $blue;
+  text-decoration: none;
+  &:hover, &:active, &:visited, &:focus {
+    text-decoration: none;
+    color: $blue;
+  }
+  .btn-previous {
+    margin-right: 10px;
+  }
+}
+
+.btn-previous {
+  font-size: 15px;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.btn-previous.blue {
+  border: 2px solid $blue;
+  color: $blue;
+}
+
 .btn-next.blue {
   border: 2px solid $blue;
   color: $blue;

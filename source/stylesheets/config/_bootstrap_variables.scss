@@ -25,6 +25,11 @@ $border-radius-sm: 2px;
 
 // Override other variables below!
 
+body {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
 .marged-top {
   margin-top: 50px;
 }

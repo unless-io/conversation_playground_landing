@@ -1,4 +1,4 @@
-<div class="navbar-wrapper hidden-up hidden-xs" id="sticky-nav">
+<div class="navbar-wrapper hidden-up hidden-xs hidden-md hidden-sm" id="sticky-nav">
   <div class="navbar-custom container">
     <% link_to "/", class: 'logo' do %>
     <%= image_tag 'logo.svg' %>
@@ -34,7 +34,7 @@
     <% link_to "/", class: 'logo' do %>
     <%= image_tag 'logo.svg' %>
     <% end %>
-    <ul class="navbar-custom-center list-inline list-unstyled hidden-xs">
+    <ul class="navbar-custom-center list-inline list-unstyled hidden-xs hidden-md hidden-sm">
       <li>
         <%= link_to "Our mission", "/#mission-section", class: 'navbar-custom-item', id: "mission", "data-target" => "#mission-section"  %>
       </li>

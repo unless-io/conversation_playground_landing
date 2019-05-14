@@ -77,14 +77,14 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .navbar-custom .logo img {
     width: 150px;
   }
 }
 
 
-@media (min-width: 500px) {
+@media (min-width: 768px) {
   .navbar-custom .logo img {
     width: 250px;
     margin-left: -50px;

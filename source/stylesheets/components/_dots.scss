@@ -27,14 +27,14 @@
   background-color: $blue;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   #dots-container {
     display: flex;
   }
 }
 
 
-@media (min-width: 500px) {
+@media (min-width: 768px) {
   #dots-container {
     display: none;
   }

@@ -113,7 +113,7 @@
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .button-next-container {
     height: 70px;
     &.large {
@@ -123,7 +123,7 @@
 }
 
 
-@media (min-width: 500px) {
+@media (min-width: 768px) {
   .button-next-container {
     height: 130px;
   }

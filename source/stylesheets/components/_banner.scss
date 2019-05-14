@@ -12,8 +12,6 @@
   justify-content: center;
   flex-direction: column;
   position: relative;
-  margin-bottom: 130px;
-  padding-bottom: 20px;
 }
 
 .banner-background .banner-image {
@@ -26,7 +24,11 @@
 
 
 
-@media (max-width: 500px) {
+@media (max-width: 767px) {
+  .banner-wrapper .banner {
+    margin-bottom: 130px;
+    padding-bottom: 20px;
+  }
   .banner-wrapper {
     flex-direction: column-reverse;
   }
@@ -55,31 +57,64 @@
   }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 768px) {
   .banner-content .descending-paragraph-container {
     position: absolute;
     right: 80px;
-    margin-top: 40px;
   }
   .banner-wrapper {
     flex-direction: column;
-  }
-  .banner .banner-content h1 {
-    font-weight: 600;
-    font-size: 50px;
-    color: $gray;
   }
   .banner-wrapper .banner-background {
     z-index: -1;
     position: absolute;
     width: 60vw;
     height: 100vh;
-    top: 10vh;
+    top: 100px;
     right: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .banner .banner-content h1 {
+    font-size: 30px;
+    font-weight: 600;
+    color: $gray;
+  }
+  .banner-wrapper .banner {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  .banner .banner-content {
+    max-width: 360px;
+    position: relative;
+    margin-top: 30px;
+  }
+  .banner-wrapper {
+    padding-bottom: 130px;
+    height: calc(100vh + 130px);
+  }
+  .banner-content .descending-paragraph-container {
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .banner .banner-content h1 {
+    font-weight: 600;
+    font-size: 50px;
+    color: $gray;
   }
   .banner .banner-content {
     max-width: 630px;
     position: relative;
+  }
+  .banner-content .descending-paragraph-container {
+    margin-top: 40px;
+  }
+  .banner-wrapper .banner {
+    margin-bottom: 130px;
+    padding-bottom: 20px;
   }
 }
 

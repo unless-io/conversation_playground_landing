@@ -1,4 +1,8 @@
-
+.list-course {
+  li {
+    margin: 10px 0;
+  }
+}
 
 section {
   display: flex;
@@ -71,6 +75,7 @@ section.blue {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   img {
     object-fit: contain;
   }

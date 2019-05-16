@@ -108,6 +108,20 @@ body_class: pages-home
       <div class="col-xs-12 col-lg-6 col-lg-push-6">
         <div class="illustration-wrapper">
           <%= image_tag 'programme.png' %>
+          <div class="cta-body hidden-xs hidden-md hidden-sm">
+            <h3>
+              Nog niet beschikbaar op uw school?
+            </h3>
+            <p>
+              Bent u een ouder of docent en heeft u interesse in de workshops? Neem dan contact op via de onderstaande knop.
+            </p>
+            <% link_to "/#contact-section", class: 'navbar-custom-item-extra', "data-target" => "#contact-section" do %>
+            <span>
+              Ik ben geïnteresseerd
+            </span>
+            <i class="fas fa-chevron-right"></i>
+            <% end %>
+          </div>
         </div>
       </div>
       <div class="col-xs-12 col-lg-6 col-lg-pull-6">
@@ -117,20 +131,45 @@ body_class: pages-home
           </h2>
           <div class="text-left">
             <p>
-              We werken samen met scholen waar we de workshops aanbieden voor groep 7 en 8. Een volledige cursus bestaat uit <strong>8 workshops van elk 1 uur.</strong> We hebben per workshop een minimum van <strong>8 kinderen nodig.</strong> De totale kosten per kind bedragen <strong>€50.</strong>
+              We werken samen met scholen, in de regio Amsterdam, waar we de workshops aanbieden vanaf groep 7 op basisscholen tot voortgezet onderwijs instellingen. Een volledige cursus bestaat uit <strong>8 workshops van elk 1 uur.</strong> We hebben per workshop een minimum van <strong>8 kinderen</strong> nodig om voldoende interactie te stimuleren. Als maximum geldt een aantal van <strong>12 kinderen:</strong> dit om ieder kind voldoende persoonlijke aandacht te kunnen geven. De totale kosten per kind bedragen <strong>€80</strong>
             </p>
-            <p class="text-left">
-              Het exacte schema wordt vastgesteld in samenwerking met de betreffende school.
+            <p>
+              Het exacte schema wordt vastgesteld in samenwerking met de betreffende school. Het proces ziet er ongeveer zo uit:
             </p>
-            <p class="text-left">
-              Bent u een ouder of docent en heeft u interesse in de workshops? Neem dan contact op via de onderstaande knop.
-            </p>
-            <% link_to "/#contact-section", class: 'navbar-custom-item-extra', "data-target" => "#contact-section" do %>
-            <span>
-              Ik ben geïnteresseerd
-            </span>
-            <i class="fas fa-chevron-right"></i>
-            <% end %>
+            <ul class="list-unstyled list-course">
+              <li>
+                <strong>Stap 1:</strong> We beginnen met een proefles. Op deze manier kunnen we het animo en niveau van de kinderen goed inschatten.
+              </li>
+              <li>
+                <strong>Stap 2:</strong> Een “meet and greet” met alle ouders.
+              </li>
+              <li>
+                <strong>Stap 3:</strong> We maken het lesschema met data en tijdstippen bekend. Nu kunt u uw kind opgeven voor de workshops.
+              </li>
+              <li>
+                <strong>Stap 4:</strong> Start van de workshops 1 t/m 3. Hierbij krijgen de kinderen toegang to het Discord account.
+              </li>
+              <li>
+                <strong>Stap 5:</strong> Bij workshop 4 kunnen de ouders 15 minuten meedoen.
+              </li>
+              <li>
+                <strong>Stap 6:</strong> Workshops 5 t/m 8. Bij workshop 8 kunnen de ouders deelnemen en samen met de kinderen hun favoriete spel spelen!
+              </li>
+            </ul>
+            <div class="cta-body visible-xs visible-md visible-sm">
+              <h3>
+                Nog niet beschikbaar op uw school?
+              </h3>
+              <p>
+                Bent u een ouder of docent en heeft u interesse in de workshops? Neem dan contact op via de onderstaande knop.
+              </p>
+              <% link_to "/#contact-section", class: 'navbar-custom-item-extra', "data-target" => "#contact-section" do %>
+              <span>
+                Ik ben geïnteresseerd
+              </span>
+              <i class="fas fa-chevron-right"></i>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
@@ -243,17 +282,17 @@ body_class: pages-home
           <form action="https://formspree.io/info@theconversationplayground.nl" method="POST" class="contact-form">
             <div class="form-left">
               <label for="name">
-                
+
               </label>
               <input type="text" name="name" id="name" placeholder="Naam" required>
               <label for="email">
-                
+
               </label>
               <input type="email" name="_replyto" placeholder="Email" required>
             </div>
             <div class="form-right">
               <label for="content">
-                
+
               </label>
               <textarea name="content" id="content" cols="30" rows="10" placeholder="Hi!" required></textarea>
               <input type="submit" class="btn-brand" value="Verstuur">

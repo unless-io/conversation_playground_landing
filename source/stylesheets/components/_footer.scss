@@ -47,6 +47,28 @@ footer .copyright {
   font-size: 12px;
 }
 
+footer .center-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .credits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin-bottom: 20px;
+  a:first-child {
+    margin-bottom: 5px;
+  }
+  a {
+    text-decoration: underline;
+  }
+}
+
 @media (max-width: 500px) {
   footer { 
     ul {

@@ -1,38 +1,5 @@
-.banner-wrapper {
-  position: relative;
-  width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.banner-wrapper .banner {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  position: relative;
-}
-
-.banner-background .banner-image {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: 85%;
-}
-
-
-
 @media (max-width: 767px) {
-  .banner-wrapper .banner {
-    margin-bottom: 130px;
-    padding-bottom: 20px;
-  }
-  .banner-wrapper {
-    flex-direction: column-reverse;
-  }
-  .banner .banner-content h1 {
+  .banner-content h1 {
     font-size: 30px;
     text-align: center;
     font-weight: 600;
@@ -40,59 +7,36 @@
     max-width: 80%;
     margin: 0 auto;
   }
-  .banner-wrapper .banner-background {
-    z-index: -1;
-    width: 100vw;
-    height: 400px;
-    margin-top: 150px;
-  }
-  .banner .banner-content {
-    max-width: 100vw;
-  }
   .banner-content .descending-paragraph-container {
     text-align: center;
     max-width: 250px;
     margin: 0 auto;
     margin-top: 40px;
   }
+  .banner-wrapper .illustration-wrapper {
+    padding-top: 75px;
+  }
 }
 
 @media (min-width: 768px) {
-  .banner-content .descending-paragraph-container {
-    position: absolute;
-    right: 80px;
+  .banner-content h1 {
+    text-align: left;
   }
-  .banner-wrapper {
-    flex-direction: column;
-  }
-  .banner-wrapper .banner-background {
-    z-index: -1;
-    position: absolute;
-    width: 60vw;
-    height: 100vh;
-    top: 100px;
-    right: 0;
+  .banner-content {
+    padding-top: 150px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .banner .banner-content h1 {
+  .banner-content h1 {
     font-size: 30px;
     font-weight: 600;
     color: $gray;
   }
-  .banner-wrapper .banner {
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-  }
-  .banner .banner-content {
+  .banner-content {
     max-width: 360px;
     position: relative;
     margin-top: 30px;
-  }
-  .banner-wrapper {
-    padding-bottom: 130px;
-    height: calc(100vh + 130px);
   }
   .banner-content .descending-paragraph-container {
     margin-top: 0px;
@@ -100,21 +44,17 @@
 }
 
 @media (min-width: 1025px) {
-  .banner .banner-content h1 {
+  .banner-content h1 {
     font-weight: 600;
     font-size: 50px;
     color: $gray;
   }
-  .banner .banner-content {
+  .banner-content {
     max-width: 630px;
     position: relative;
   }
   .banner-content .descending-paragraph-container {
     margin-top: 40px;
-  }
-  .banner-wrapper .banner {
-    margin-bottom: 130px;
-    padding-bottom: 20px;
   }
 }
 

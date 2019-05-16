@@ -5,31 +5,36 @@ body_class: pages-home
 
 <div id="dots-container"></div>
 
-<div class="banner-wrapper">
-  <div class="banner container">
-    <div class="banner-content">
-      <h1>
-        Engelse les, maar dan anders! Zo bouwt uw kind zelfvertrouwen op
-      </h1>
-      <div class="descending-paragraph-container">
-        <p>
-          Interactieve en sociale workshops waarbij kinderen spelenderwijs Engels leren – zonder dat ze het zelf door hebben!
-        </p>
+<section class="default banner-wrapper" data-target="#mission">
+  <div class="container section-content">
+    <div class="row">
+      <div class="col-xs-12 col-lg-6 col-lg-push-6">
+        <div class="illustration-wrapper">
+          <%= image_tag 'conversationplayground-header.png' %>
+        </div>
+      </div>
+      <div class="col-xs-12 col-lg-6 col-lg-pull-6">
+        <div class="content-card left">
+          <div class="banner-content">
+            <h1>
+              Engelse les, maar dan anders! Zo bouwt uw kind zelfvertrouwen op
+            </h1>
+            <div class="descending-paragraph-container">
+              <p>
+                Interactieve en sociale workshops waarbij kinderen spelenderwijs Engels leren – zonder dat ze het zelf door hebben!
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <div class="button-next-container">
+      <% link_to "#", class: "btn-next blue" do %>
+      <i class="fas fa-chevron-down"></i>
+      <% end %>
+    </div>
   </div>
-  <div class="banner-background">
-    <div class="banner-image" style="background-image:url('<%= image_path 'conversationplayground-header.png' %>');"></div>
-  </div>
-  <div class="button-next-container large">
-    <p>
-      Ontdek meer
-    </p>
-    <% link_to "#", class: "btn-next blue" do %>
-    <i class="fas fa-chevron-down"></i>
-    <% end %>
-  </div>
-</div>
+</section>
 
 <section class="default" data-target="#mission" id="mission-section">
   <div class="container section-content">

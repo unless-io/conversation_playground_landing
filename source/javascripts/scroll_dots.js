@@ -1,5 +1,4 @@
 var allSections = [];
-allSections.push(document.querySelector('.banner-wrapper'));
 document.querySelectorAll('section').forEach(function(item) {
   allSections.push(item);
 });

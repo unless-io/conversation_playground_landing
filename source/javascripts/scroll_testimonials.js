@@ -51,12 +51,11 @@ function scrollTestimonials() {
     dot.addEventListener('click', function(event) {
       event.preventDefault();
       var currentTestimonial = document.querySelector(event.currentTarget.dataset.target);
-
       allTestimonials.forEach(function(testimonial) { 
         testimonial.classList.remove('active')
       })
       currentTestimonial.classList.add('active');
-      currentTestimonial.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
+      currentTestimonial.scrollIntoView({behavior: "smooth", block: "nearest", inline: "center"});
     })
   })
 

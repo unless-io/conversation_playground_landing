@@ -36,6 +36,24 @@ body_class: pages-home
   </div>
 </section>
 
+<section class="default" id="video-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-lg-offset-3 col-md-12 col-sm-8 col-sm-offset-2 col-xs-12">
+        <iframe id="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/d6-j_IN6KJc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>
+          <% link_to "/#contact-section", class: 'navbar-custom-item-extra', "data-target" => "#contact-section" do %>
+          <span>
+            Ik ben geïnteresseerd
+          </span>
+          <i class="fas fa-chevron-right"></i>
+          <% end %>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="default" data-target="#mission" id="mission-section">
   <div class="container section-content">
     <div class="row">
@@ -137,7 +155,7 @@ body_class: pages-home
 
           <div class="text-left">
             <p>          
-              We werken samen met scholen, in de regio Amsterdam, waar we de workshops aanbieden vanaf groep 7 op basisscholen tot voortgezet onderwijs instellingen. Een volledige cursus bestaat uit <strong>8 workshops van elk 1 uur.</strong> We hebben per workshop een minimum van <strong> 8 kinderen</strong> nodig om voldoende interactie te stimuleren. Als maximum geldt een aantal van <strong>12 kinderen:</strong> dit om ieder kind voldoende persoonlijke aandacht te kunnen geven. De totale kosten per kind bedragen <strong>€80.</strong>
+              We werken samen met scholen, in de regio Amsterdam, waar we de workshops aanbieden vanaf groep 7 op basisscholen tot voortgezet onderwijs instellingen. Een volledige cursus bestaat uit <strong>8 workshops van elk 1 uur.</strong> We hebben per workshop een minimum van <strong> 8 kinderen</strong> nodig om voldoende interactie te stimuleren. Als maximum geldt een aantal van <strong>12 kinderen:</strong> dit om ieder kind voldoende persoonlijke aandacht te kunnen geven. De totale kosten per kind bedragen <strong>€100.</strong>
             </p>
             <p>
               Het exacte schema wordt vastgesteld in samenwerking met de betreffende school. Het proces ziet er ongeveer zo uit:
@@ -292,6 +310,10 @@ body_class: pages-home
 
               </label>
               <input type="email" name="_replyto" placeholder="Email" required>
+              <label for="school">
+
+              </label>
+              <input type="text" name="school" placeholder="School name & town">
             </div>
             <div class="form-right">
               <label for="content">

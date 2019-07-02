@@ -85,7 +85,6 @@ function scrollDots() {
   allDots.forEach(function(item, index) {
     item.addEventListener('click', function(event) {
       event.preventDefault();
-
       allSections[index].scrollIntoView({behavior: "smooth"});
 
       setTimeout(function(){

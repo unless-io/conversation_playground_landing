@@ -37,19 +37,26 @@ body_class: pages-home
 </section>
 
 <section class="default" id="video-section">
-  <div class="container">
+  <div class="container section-content">
     <div class="row">
-      <div class="col-lg-6 col-lg-offset-3 col-md-12 col-sm-8 col-sm-offset-2 col-xs-12">
-        <iframe id="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/d6-j_IN6KJc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <p>
-          <% link_to "/#contact-section", class: 'navbar-custom-item-extra', "data-target" => "#contact-section" do %>
-          <span>
-            Ik ben geïnteresseerd
-          </span>
-          <i class="fas fa-chevron-right"></i>
-          <% end %>
-        </p>
+      <div class="col-xs-12">
+        <div class="video-wrapper">
+          <iframe id="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/d6-j_IN6KJc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>
+            <% link_to "/#contact-section", class: 'navbar-custom-item-extra', "data-target" => "#contact-section" do %>
+            <span>
+              Ik ben geïnteresseerd
+            </span>
+            <i class="fas fa-chevron-right"></i>
+            <% end %>
+          </p>
+        </div>
       </div>
+    </div>
+    <div class="button-next-container">
+      <% link_to "#", class: "btn-next blue" do %>
+      <i class="fas fa-chevron-down"></i>
+      <% end %>
     </div>
   </div>
 </section>

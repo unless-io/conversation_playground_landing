@@ -1,3 +1,8 @@
 #youtube-video {
   max-width: 80vw;
 }
+
+#youtube-video ~ .navbar-custom-item-extra {
+  margin-top: 20px;
+  display: inline-block;
+}

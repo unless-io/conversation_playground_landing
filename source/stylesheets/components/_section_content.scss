@@ -11,8 +11,8 @@ section {
   position: relative;
   .section-content {
     height: 80%;
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
   }
 }
 
@@ -27,7 +27,8 @@ section.blue {
 .usp-container {
   max-width: 900px;
   margin: 0 auto;
-  .fas, .far {
+  .fas,
+  .far {
     display: block;
     margin: 0 auto;
     text-align: center;
@@ -52,7 +53,6 @@ section.blue {
     font-weight: 200;
   }
 }
-
 
 .side-icon-container {
   display: flex;
@@ -108,12 +108,12 @@ section.blue {
 
 .content-card.left {
   text-align: right;
-  align-items: flex-end
+  align-items: flex-end;
 }
 
 .content-card.right {
   text-align: left;
-  align-items: flex-start
+  align-items: flex-start;
 }
 
 #program-section {
@@ -148,7 +148,6 @@ section.blue {
   }
 }
 
-
 @media (min-width: 768px) {
   section.default {
     padding-top: 66px;
@@ -179,7 +178,8 @@ section.blue {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .content-card.left, .content-card.right {
+  .content-card.left,
+  .content-card.right {
     align-items: flex-start;
   }
 }

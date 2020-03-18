@@ -12,9 +12,16 @@
     max-width: 250px;
     margin: 0 auto;
     margin-top: 40px;
+    a {
+      display: inline-block;
+      margin: 10px 0;
+    }
   }
   .banner-wrapper .illustration-wrapper {
     padding-top: 75px;
+  }
+  #in-banner {
+    align-items: center;
   }
 }
 
@@ -55,6 +62,6 @@
   }
   .banner-content .descending-paragraph-container {
     margin-top: 40px;
+    text-align: left;
   }
 }
-

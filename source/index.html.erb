@@ -14,7 +14,7 @@ body_class: pages-home
         </div>
       </div>
       <div class="col-xs-12 col-lg-6 col-lg-pull-6">
-        <div class="content-card left">
+        <div class="content-card left" id="in-banner">
           <div class="banner-content">
             <h1>
               Engelse les, maar dan anders! <br> Zo spreekt uw kind vloeiender Engels
@@ -23,6 +23,12 @@ body_class: pages-home
               <p>
                 Interactieve en sociale workshops waarbij kinderen spelenderwijs Engels leren spreken – zonder dat ze het zelf door hebben!
               </p>
+              <% link_to "/#contact-section", class: 'navbar-custom-item-extra', "data-target" => "#contact-section" do %>
+                <span>
+                  Ik ben geïnteresseerd
+                </span>
+                <i class="fas fa-chevron-right"></i>
+              <% end %>
             </div>
           </div>
         </div>
@@ -149,20 +155,6 @@ body_class: pages-home
       <div class="col-xs-12 col-lg-6 col-lg-push-6">
         <div class="illustration-wrapper">
           <%= image_tag 'programme.png' %>
-          <div class="cta-body hidden-xs hidden-md hidden-sm">
-            <h3>
-              Nog niet beschikbaar op uw school?
-            </h3>
-            <p>
-              Bent u een ouder of docent en heeft u interesse in de workshops? Neem dan contact op via de onderstaande knop.
-            </p>
-            <% link_to "/#contact-section", class: 'navbar-custom-item-extra', "data-target" => "#contact-section" do %>
-            <span>
-              Ik ben geïnteresseerd
-            </span>
-            <i class="fas fa-chevron-right"></i>
-            <% end %>
-          </div>
         </div>
       </div>
       <div class="col-xs-12 col-lg-6 col-lg-pull-6">
@@ -172,42 +164,47 @@ body_class: pages-home
           </h2>
 
           <div class="text-left">
-            <p>          
-              We werken samen met scholen, in de regio Amsterdam, waar we de workshops aanbieden vanaf groep 7 op basisscholen tot voortgezet onderwijs instellingen. Een volledige cursus bestaat uit <strong>8 workshops van elk 1 uur.</strong> We hebben per workshop een minimum van <strong> 8 kinderen</strong> nodig om voldoende interactie te stimuleren. Als maximum geldt een aantal van <strong>12 kinderen:</strong> dit om ieder kind voldoende persoonlijke aandacht te kunnen geven. De totale kosten per kind bedragen <strong>€100.</strong>
-            </p>
-            <p>
-              Het exacte schema wordt vastgesteld in samenwerking met de betreffende school. Het proces ziet er ongeveer zo uit:
-            </p>
-            <ul class="list-unstyled list-course">
-              <li>
-                <strong>Stap 1:</strong> De school maakt het lesschema met data en tijdstippen bekend per e-mail.
-              </li>
-              <li>
-                <strong>Stap 2:</strong> We beginnen met een gratis proefles. Op deze manier kunnen we het animo en niveau van de kinderen goed inschatten. Voor de ouders is er optioneel een “meet and greet”.
-              </li>
-              <li>
-                <strong>Stap 3:</strong> De registratie voor de workshops is geopend. We ontvangen maximaal 12 kinderen per traject, vol = vol. 
-              </li>
-              <li>
-                <strong>Stap 4:</strong> De workshops gaan van start volgens de planning. U kunt als ouder op de hoogte blijven van de voortgang via onze <a href="https://www.facebook.com/The-Conversation-Playground-2041197939507914/" target="blank">Facebookpagina</a>. 
-              </li>
-              <li>
-                <strong>Stap 5:</strong> Laatste workshop. U kunt als ouder(s) deelnemen aan deze workshop en samen met de kinderen hun favoriete spel in het Engels spelen!
-              </li>
-            </ul>
-            <div class="cta-body visible-xs visible-md visible-sm">
-              <h3>
-                Nog niet beschikbaar op uw school?
-              </h3>
-              <p>
-                Bent u een ouder of docent en heeft u interesse in de workshops? Neem dan contact op via de onderstaande knop.
-              </p>
-              <% link_to "/#contact-section", class: 'navbar-custom-item-extra', "data-target" => "#contact-section" do %>
-              <span>
-                Ik ben geïnteresseerd
-              </span>
-              <i class="fas fa-chevron-right"></i>
-              <% end %>
+            <div class="cards-container">
+              <div class="workshop-card">
+                <div class="card-content">
+                  <h3>
+                    Engelse conversatie spelletjes cursus
+                  </h3>
+                  <p>
+                    8 workshops
+                  </p>
+                  <p>
+                    Maximaal 12 kinderen
+                  </p>
+                  <p>
+                    Vanaf groep 7 t/m klas 2 vo
+                  </p>
+                  <p>
+                    €100.-
+                  </p>
+                </div>
+                <%= link_to "Lees meer", "/workshops/engelse_conversatie_spelletjes_cursus.html"  %>
+              </div>
+              <div class="workshop-card">
+                <div class="card-content">
+                  <h3>
+                    Engels coding bootcamp
+                  </h3>
+                  <p>
+                    4 workshops
+                  </p>
+                  <p>
+                    Maximaal 10 kinderen
+                  </p>
+                  <p>
+                    Vanaf groep 8 t/m klas 3 vo
+                  </p>
+                  <p>
+                    €285.- (inclusief Micro:bit)
+                  </p>
+                </div>
+                <%= link_to "Lees meer", "/workshops/engels_coding_bootcamp.html"  %>
+              </div>
             </div>
           </div>
         </div>

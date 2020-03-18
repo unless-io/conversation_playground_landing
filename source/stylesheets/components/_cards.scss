@@ -1,0 +1,25 @@
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  grid-auto-rows: auto;
+  margin-top: 40px;
+}
+
+.workshop-card {
+  border: 1px solid rgba(1, 1, 1, 0.2);
+  padding: 20px 30px;
+  border-radius: 2px;
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  a {
+    text-decoration: underline;
+    text-decoration-color: #f23557;
+  }
+  h3 {
+    margin-top: 0;
+  }
+}

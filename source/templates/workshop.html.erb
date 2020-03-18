@@ -1,0 +1,90 @@
+---
+title: The Conversation Playground - Workshops
+---
+
+<div class="team-bio-wrapper">
+  <div class="container">
+<div class="row">
+<div class="col-xs-12 visible-xs">
+        <% link_to "/#program-section", class: "btn-previous-container" do %>
+            <div class="btn-previous blue">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <span>
+                Terug
+            </span>
+        <% end %>
+        </div>
+<div class="hidden-xs">
+    <div class="side-info-container">
+        <% link_to "/#program-section", class: "btn-previous-container" do %>
+            <div class="btn-previous blue">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <span>
+                Terug
+            </span>
+        <% end %>
+        <ul>
+            <li>
+                <%= workshop["amount"] %> Workshops
+            </li>
+            <li>
+                <%= workshop["time"] %> Uur per workshop
+            </li>
+            <li>
+                Max. <%= workshop["max_amount"] %> kinderen
+            </li>
+            <li>
+                <%= workshop["date"] %>
+            </li>
+            <li>
+                <%= workshop["date"] %>
+            </li>
+            <li>
+                <%= workshop["from_age"] %>
+            </li>
+            <li>
+                <%= workshop["price"] %>
+            </li>
+        </ul>
+        <%= link_to "Inschrijven", "/#contact-section", class: "navbar-custom-item-extra" %>
+    </div>
+    </div>
+      <div class="col-xs-12 col-lg-9">
+        <div class="main-info-container">
+            <%= partial workshop["partial"] %>
+        </div>
+      </div>
+      <div class="visible-xs">
+          <div class="side-info-container grid">
+
+        <ul>
+            <li>
+                <%= workshop["amount"] %> Workshops
+            </li>
+            <li>
+                <%= workshop["time"] %> Uur per workshop
+            </li>
+            <li>
+                Max. <%= workshop["max_amount"] %> kinderen
+            </li>
+            <li>
+                <%= workshop["date"] %>
+            </li>
+            <li>
+                <%= workshop["date"] %>
+            </li>
+            <li>
+                <%= workshop["from_age"] %>
+            </li>
+            <li>
+                <%= workshop["price"] %>
+            </li>
+        </ul>
+        <%= link_to "Inschrijven", "/#contact-section", class: "navbar-custom-item-extra" %>
+    </div>
+      </div>
+    </div>
+  </div>
+</div>

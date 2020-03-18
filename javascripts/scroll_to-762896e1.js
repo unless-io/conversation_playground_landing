@@ -1,0 +1,1 @@
+function scrollToSection(){var e=document.querySelectorAll(".btn-next"),o=document.querySelectorAll("section");e.forEach(function(e,t){e.addEventListener("click",function(e){e.preventDefault(),o[t+1].scrollIntoView({behavior:"smooth"})})})}

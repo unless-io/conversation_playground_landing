@@ -16,10 +16,34 @@
   justify-content: space-between;
   align-items: flex-end;
   a {
-    text-decoration: underline;
-    text-decoration-color: #f23557;
+    border-bottom: 1px solid #f23557;
+    text-decoration: none;
+    transition: border-bottom 200ms ease;
+    min-height: 25px;
+    &:hover {
+      text-decoration: none;
+      border-bottom: 3px solid #f23557;
+    }
   }
   h3 {
     margin-top: 0;
+  }
+  .card-content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+  #program-section .content-card.left {
+    align-items: inherit;
+  }
+}
+
+@media (min-width: 768px) {
+  .cards-container .workshop-card h3 {
+    min-height: 90px;
   }
 }

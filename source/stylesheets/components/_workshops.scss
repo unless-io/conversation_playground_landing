@@ -42,6 +42,11 @@
   opacity: 0.5;
 }
 
+.workshop-price {
+  background-color: $blue;
+  color: white;
+}
+
 @media (min-width: 900px) {
   .side-info-container {
     width: 25%;

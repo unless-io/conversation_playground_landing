@@ -15,9 +15,16 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
-  a {
-    border-bottom: 1px solid #f23557;
+  text-decoration: none;
+  color: $gray;
+  transform: scale(1);
+  transition: transform 200ms ease;
+  &:hover {
     text-decoration: none;
+    transform: scale(1.05);
+  }
+  span {
+    border-bottom: 1px solid #f23557;
     transition: border-bottom 200ms ease;
     min-height: 25px;
     &:hover {

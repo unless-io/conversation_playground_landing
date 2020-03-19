@@ -3,6 +3,14 @@ title: The Conversation Playground - Home
 body_class: pages-home
 ---
 
+<div class="alert-temp">
+  <p>
+    Coronavirus: Alle Conversation Playground cursussen zijn volledig online. 
+    Wij zijn enthousiast over de nieuwe mogelijkheden die online workshops bieden, 
+    nog leerzamer en leuker leren!
+  </p>
+</div>
+
 <div id="dots-container"></div>
 
 <section class="default banner-wrapper" data-target="#mission">
@@ -165,7 +173,7 @@ body_class: pages-home
 
           <div class="text-left">
             <div class="cards-container">
-              <div class="workshop-card">
+                <% link_to "/workshops/learning_english_through_games.html", class: 'workshop-card' do %>
                 <div class="card-content">
                   <h3>
                     Learning English through games
@@ -183,12 +191,12 @@ body_class: pages-home
                     €100.-
                   </p>
                 </div>
-                <%= link_to "Lees meer", "/workshops/learning_english_through_games.html"  %>
-              </div>
-              <div class="workshop-card">
+                <span>Lees meer</span>
+                <% end %>
+                <% link_to "/workshops/english_coding_bootcamp.html", class: 'workshop-card' do %>
                 <div class="card-content">
                   <h3>
-                    English coding bootcamp
+                    English + Coding Bootcamp
                   </h3>
                   <p>
                     4 workshops
@@ -203,8 +211,9 @@ body_class: pages-home
                     €285.- (inclusief Micro:bit)
                   </p>
                 </div>
-                <%= link_to "Lees meer", "/workshops/english_coding_bootcamp.html"  %>
-              </div>
+                <span>Lees meer</span>
+                <% end %>
+
             </div>
           </div>
         </div>

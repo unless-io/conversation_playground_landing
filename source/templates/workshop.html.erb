@@ -25,7 +25,13 @@ title: The Conversation Playground - Workshops
                 Terug
             </span>
         <% end %>
+
         <ul>
+            <li>
+                <h3>
+                    <%= workshop["name"] %>
+                </h3>
+            </li>
             <li>
                 <%= workshop["amount"] %> workshops
             </li>
@@ -40,13 +46,23 @@ title: The Conversation Playground - Workshops
                     <%= workshop["date"] %>
                 </strong>
             </li>
+            <% if workshop["duration_1"] %>
+                <li>
+                    <%= workshop["duration_1"] %>
+                </li>
+            <% end %>
+            <% if workshop["duration_2"] %>
+                <li>
+                    <%= workshop["duration_2"] %>
+                </li>
+            <% end %>
             <li>
                 <% if workshop["location_link"] %>
                     <a href="<%= workshop["location_link"] %>" target="_blank">
-                        <%= workshop["location"] %>
+                        <%= workshop["location"] %> (tijdelijk online)
                     </a>
                 <% else %>
-                    <%= workshop["location"] %>
+                    <%= workshop["location"] %> (tijdelijk online)
                 <% end %>
             </li>
             <li>
@@ -74,6 +90,11 @@ title: The Conversation Playground - Workshops
 
         <ul>
             <li>
+                <h3>
+                    <%= workshop["name"] %>
+                </h3>
+            </li>
+            <li>
                 <%= workshop["amount"] %> workshops
             </li>
             <li>
@@ -96,6 +117,17 @@ title: The Conversation Playground - Workshops
                     <%= workshop["date"] %>
                 </strong>
             </li>
+            
+            <% if workshop["duration_1"] %>
+                <li>
+                    <%= workshop["duration_1"] %>
+                </li>
+            <% end %>
+            <% if workshop["duration_2"] %>
+                <li>
+                    <%= workshop["duration_2"] %>
+                </li>
+            <% end %>
             <li>
                 <%= workshop["from_age"] %>
             </li>

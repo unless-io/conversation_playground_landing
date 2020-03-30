@@ -5,7 +5,7 @@ body_class: pages-home
 
 <div class="alert-temp">
   <p>
-    Coronavirus: Alle Conversation Playground cursussen zijn volledig online. 
+    Coronavirus: Alle Conversation Playground cursussen zijn nu volledig online. 
     Wij zijn enthousiast over de nieuwe mogelijkheden die online workshops bieden, 
     nog leerzamer en leuker leren!
   </p>
@@ -49,6 +49,64 @@ body_class: pages-home
     </div>
   </div>
 </section>
+
+<section class="default" data-target="#program" id="program-section">
+  <div class="container section-content">
+    <div class="row">
+      <div class="col-xs-12 col-lg-6 col-lg-push-6">
+        <div class="illustration-wrapper">
+          <%= image_tag 'programme.png' %>
+        </div>
+      </div>
+      <div class="col-xs-12 col-lg-6 col-lg-pull-6">
+        <div class="content-card left">
+          <h2 class="text-left">
+            De workshops
+          </h2>
+
+          <div class="text-left">
+            <div class="cards-container">
+            
+              <% data.workshops.each do |workshop| %>       
+                  <% link_to "/workshops/#{workshop["slug"]}.html", class: 'workshop-card' do %>
+                  <div class="card-content">
+                    <h3>
+                      <%= workshop["name"] %>
+                    </h3>
+                    <p>
+                      <%= workshop["amount"] %> workshop<%= workshop["amount"].to_i > 1 ? 's' : '' %>
+                    </p>
+                    <p>
+                      Maximaal <%= workshop["max_amount"] %> kinderen
+                    </p>
+                    <p>
+                      <%= workshop["from_age"] %>
+                    </p>
+                    <p>
+                      <%= workshop["price"] %>
+                    </p>
+                  </div>
+                  <span>Lees meer</span>
+                  <div class="card-footer">
+                    <p>
+                      Tijdelijk online
+                    </p>
+                  </div>
+                  <% end %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="button-next-container">
+      <% link_to "#", class: "btn-next blue" do %>
+      <i class="fas fa-chevron-down"></i>
+      <% end %>
+    </div>
+  </div>
+</section>
+
 
 <section class="default" id="video-section">
   <div class="container section-content">
@@ -157,75 +215,6 @@ body_class: pages-home
   </div>
 </section>
 
-<section class="default" data-target="#program" id="program-section">
-  <div class="container section-content">
-    <div class="row">
-      <div class="col-xs-12 col-lg-6 col-lg-push-6">
-        <div class="illustration-wrapper">
-          <%= image_tag 'programme.png' %>
-        </div>
-      </div>
-      <div class="col-xs-12 col-lg-6 col-lg-pull-6">
-        <div class="content-card left">
-          <h2 class="text-left">
-            De workshops
-          </h2>
-
-          <div class="text-left">
-            <div class="cards-container">
-                <% link_to "/workshops/learning_english_through_games.html", class: 'workshop-card' do %>
-                <div class="card-content">
-                  <h3>
-                    Learning English through games
-                  </h3>
-                  <p>
-                    8 workshops
-                  </p>
-                  <p>
-                    Maximaal 12 kinderen
-                  </p>
-                  <p>
-                    Vanaf groep 7 t/m klas 2 vo
-                  </p>
-                  <p>
-                    €100.-
-                  </p>
-                </div>
-                <span>Lees meer</span>
-                <% end %>
-                <% link_to "/workshops/english_coding_bootcamp.html", class: 'workshop-card' do %>
-                <div class="card-content">
-                  <h3>
-                    English + Coding Bootcamp
-                  </h3>
-                  <p>
-                    4 workshops
-                  </p>
-                  <p>
-                    Maximaal 10 kinderen
-                  </p>
-                  <p>
-                    Vanaf groep 8 t/m klas 3 vo
-                  </p>
-                  <p>
-                    €285.- (inclusief Micro:bit)
-                  </p>
-                </div>
-                <span>Lees meer</span>
-                <% end %>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="button-next-container">
-      <% link_to "#", class: "btn-next blue" do %>
-      <i class="fas fa-chevron-down"></i>
-      <% end %>
-    </div>
-  </div>
-</section>
 
 <section class="default" data-target="#team" id="team-section">
   <div class="container section-content">

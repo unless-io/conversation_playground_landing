@@ -17,6 +17,7 @@ title: The Conversation Playground - Workshops
         </div>
 <div class="hidden-xs hidden-md hidden-sm">
     <div class="side-info-container">
+    
         <% link_to "/#program-section", class: "btn-previous-container" do %>
             <div class="btn-previous blue">
                 <i class="fas fa-chevron-left"></i>
@@ -27,6 +28,11 @@ title: The Conversation Playground - Workshops
         <% end %>
 
         <ul>
+            <% if workshop["type"] == "bootcamp" %>
+                <li class="bootcamp-banner">
+                    Bootcamp
+                </li>
+            <% end %>
             <li>
                 <h3>
                     <%= workshop["name"] %>
@@ -62,7 +68,7 @@ title: The Conversation Playground - Workshops
                         <%= workshop["location"] %> (tijdelijk online)
                     </a>
                 <% else %>
-                    <%= workshop["location"] %> (tijdelijk online)
+                    <%= workshop["location"] %> Online
                 <% end %>
             </li>
             <li>

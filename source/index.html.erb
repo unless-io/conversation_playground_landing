@@ -29,7 +29,7 @@ body_class: pages-home
             </h1>
             <div class="descending-paragraph-container">
               <p>
-                Interactieve en sociale workshops waarbij kinderen spelenderwijs Engels leren spreken – zonder dat ze het zelf door hebben!
+                Interactieve en sociale workshops waarbij kinderen spelenderwijs Engels leren spreken
               </p>
               <% link_to "/#contact-section", class: 'navbar-custom-item-extra', "data-target" => "#contact-section" do %>
                 <span>
@@ -49,64 +49,6 @@ body_class: pages-home
     </div>
   </div>
 </section>
-
-<section class="default" data-target="#program" id="program-section">
-  <div class="container section-content">
-    <div class="row">
-      <div class="col-xs-12 col-lg-6 col-lg-push-6">
-        <div class="illustration-wrapper">
-          <%= image_tag 'programme.png' %>
-        </div>
-      </div>
-      <div class="col-xs-12 col-lg-6 col-lg-pull-6">
-        <div class="content-card left">
-          <h2 class="text-left">
-            De workshops
-          </h2>
-
-          <div class="text-left">
-            <div class="cards-container">
-            
-              <% data.workshops.each do |workshop| %>       
-                  <% link_to "/workshops/#{workshop["slug"]}.html", class: 'workshop-card' do %>
-                  <div class="card-content">
-                    <h3>
-                      <%= workshop["name"] %>
-                    </h3>
-                    <p>
-                      <%= workshop["amount"] %> workshop<%= workshop["amount"].to_i > 1 ? 's' : '' %>
-                    </p>
-                    <p>
-                      Maximaal <%= workshop["max_amount"] %> kinderen
-                    </p>
-                    <p>
-                      <%= workshop["from_age"] %>
-                    </p>
-                    <p>
-                      <%= workshop["price"] %>
-                    </p>
-                  </div>
-                  <span>Lees meer</span>
-                  <div class="card-footer">
-                    <p>
-                      Tijdelijk online
-                    </p>
-                  </div>
-                  <% end %>
-              <% end %>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="button-next-container">
-      <% link_to "#", class: "btn-next blue" do %>
-      <i class="fas fa-chevron-down"></i>
-      <% end %>
-    </div>
-  </div>
-</section>
-
 
 <section class="default" id="video-section">
   <div class="container section-content">
@@ -204,6 +146,74 @@ body_class: pages-home
           <p>
             Zo bouwen de kinderen op natuurlijke wijze zelfvertrouwen op in het spreken en leren ze de taal diepgaander kennen.
           </p>
+        </div>
+      </div>
+    </div>
+    <div class="button-next-container">
+      <% link_to "#", class: "btn-next blue" do %>
+      <i class="fas fa-chevron-down"></i>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="default" data-target="#program" id="program-section">
+  <div class="container section-content">
+    <div class="row">
+      <div class="col-xs-12 col-lg-6 col-lg-push-6">
+        <div class="illustration-wrapper">
+          <%= image_tag 'programme.png' %>
+        </div>
+      </div>
+      <div class="col-xs-12 col-lg-6 col-lg-pull-6">
+        <div class="content-card left">
+          <h2 class="text-left">
+            De workshops
+          </h2>
+
+          <div class="text-left">
+            <div class="cards-container">
+            
+              <% data.workshops.each do |workshop| %>       
+                  <% link_to "/workshops/#{workshop["slug"]}.html", class: 'workshop-card' do %>
+                  
+                  <% if workshop["type"] == "bootcamp" %>
+                    <div class="bootcamp-banner">
+                      <div class="text">
+                        Bootcamp
+                      </div>
+                      <div class="banner-background-container">
+                        <div class="banner-background"></div>
+                      </div>
+                    </div>
+                  <% end %>
+                  <div class="card-content">
+                    <h3>
+                      <%= workshop["name"] %>
+                    </h3>
+                    <p>
+                      <%= workshop["amount"] %> workshop<%= workshop["amount"].to_i > 1 ? 's' : '' %>
+                    </p>
+                    <p>
+                      Maximaal <%= workshop["max_amount"] %> kinderen
+                    </p>
+                    <p>
+                      <%= workshop["from_age"] %>
+                    </p>
+                    <p>
+                      <%= workshop["price"] %>
+                    </p>
+                  </div>
+                  <span>Lees meer</span>
+                  <div class="card-footer">
+                    <p>
+                      Tijdelijk online
+                    </p>
+                  </div>
+                  <% end %>
+              <% end %>
+            </div>
+          </div>
         </div>
       </div>
     </div>

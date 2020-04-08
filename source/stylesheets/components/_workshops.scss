@@ -20,6 +20,11 @@
   padding-right: 30px;
 }
 
+.workshop-illustration {
+  margin: 0 auto;
+  display: block;
+}
+
 .side-info-container ul {
   list-style: none;
   padding: 0;
@@ -34,7 +39,7 @@
     background-color: $red;
     color: white;
     text-align: center;
-    font-size: 10px;
+    font-size: 14px;
     padding: 5px 0;
   }
 }

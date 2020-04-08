@@ -92,9 +92,14 @@ title: The Conversation Playground - Workshops
         </div>
       </div>
       <div class="visible-xs visible-md visible-sm">
-          <div class="side-info-container grid">
+          <div class="side-info-container">
 
         <ul>
+            <% if workshop["type"] == "bootcamp" %>
+                <li class="bootcamp-banner">
+                    Bootcamp
+                </li>
+            <% end %>
             <li>
                 <h3>
                     <%= workshop["name"] %>

@@ -6,7 +6,7 @@
   img {
     filter: grayscale(100%);
     border-radius: 50%;
-    box-shadow: 0px 0px 5px rgba(1,1,1,0.2);
+    box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.2);
     width: 100%;
     object-fit: cover;
     transition: filter 200ms ease;
@@ -26,8 +26,8 @@
   }
 }
 
-
 .team-bio-wrapper {
+  margin-top: 20px;
   min-height: calc(100vh - 200px);
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@
 }
 
 .team-avatar {
-  box-shadow: 0px 0px 5px rgba(1,1,1,0.2);
+  box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.2);
   max-width: 200px;
   max-height: 200px;
   object-fit: cover;
@@ -87,7 +87,6 @@
     text-align: left;
   }
 }
-
 
 @media (min-width: 768px) {
   .team-center {

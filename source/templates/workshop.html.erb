@@ -1,158 +1,153 @@
 ---
 title: The Conversation Playground - Workshops
 ---
-
 <div class="team-bio-wrapper">
   <div class="container">
-<div class="row">
-<div class="col-xs-12 visible-xs visible-md visible-sm">
+    <div class="row">
+      <div class="col-xs-12 visible-xs visible-md visible-sm">
         <% link_to "/#program-section", class: "btn-previous-container" do %>
+          <div class="btn-previous blue">
+            <i class="fas fa-chevron-left"></i>
+          </div>
+          <span>
+            Terug
+          </span>
+        <% end %>
+      </div>
+      <div class="hidden-xs hidden-md hidden-sm">
+        <div class="side-info-container">
+          <% link_to "/#program-section", class: "btn-previous-container" do %>
             <div class="btn-previous blue">
-                <i class="fas fa-chevron-left"></i>
+              <i class="fas fa-chevron-left"></i>
             </div>
             <span>
-                Terug
+              Terug
             </span>
-        <% end %>
-        </div>
-<div class="hidden-xs hidden-md hidden-sm">
-    <div class="side-info-container">
-    
-        <% link_to "/#program-section", class: "btn-previous-container" do %>
-            <div class="btn-previous blue">
-                <i class="fas fa-chevron-left"></i>
-            </div>
-            <span>
-                Terug
-            </span>
-        <% end %>
-
-        <ul>
+          <% end %>
+          <ul>
             <% if workshop["type"] == "bootcamp" %>
-                <li class="bootcamp-banner">
-                    Bootcamp
-                </li>
+              <li class="bootcamp-banner">
+                Bootcamp
+              </li>
             <% end %>
             <li>
-                <h3>
-                    <%= workshop["name"] %>
-                </h3>
+              <h3>
+                <%= workshop["name"] %>
+              </h3>
             </li>
             <li>
-                <%= workshop["amount"] %> workshops
+              <%= workshop["amount"] %> workshops
             </li>
             <li>
-                <%= workshop["time"] %> uur per workshop
+              <%= workshop["time"] %> uur per workshop
             </li>
             <li>
-                Max. <%= workshop["max_amount"] %> kinderen
+              Max. <%= workshop["max_amount"] %> kinderen
             </li>
             <li>
-                <strong>
-                    <%= workshop["date"] %>
-                </strong>
+              <strong>
+                <%= workshop["date"] %>
+              </strong>
             </li>
             <% if workshop["duration_1"] %>
-                <li>
-                    <%= workshop["duration_1"] %>
-                </li>
+              <li>
+                <%= workshop["duration_1"] %>
+              </li>
             <% end %>
             <% if workshop["duration_2"] %>
-                <li>
-                    <%= workshop["duration_2"] %>
-                </li>
+              <li>
+                <%= workshop["duration_2"] %>
+              </li>
             <% end %>
             <li>
-                <% if workshop["location_link"] %>
-                    <a href="<%= workshop["location_link"] %>" target="_blank">
-                        <%= workshop["location"] %> (tijdelijk online)
-                    </a>
-                <% else %>
-                    <%= workshop["location"] %> Online
-                <% end %>
+              <% if workshop["location_link"] %>
+                <a href="<%= workshop["location_link"] %>" target="_blank">
+                  <%= workshop["location"] %> (tijdelijk online)
+                </a>
+              <% else %>
+                <%= workshop["location"] %> Online
+              <% end %>
             </li>
             <li>
-                <%= workshop["from_age"] %>
+              <%= workshop["from_age"] %>
             </li>
             <li class="workshop-price">
-                <%= workshop["price"] %>
+              <%= workshop["price"] %>
             </li>
             <% if workshop["price_addition"] %>
-                <li>
-                    <%= workshop["price_addition"] %>
-                </li>
-            <% end %>  
-        </ul>
-        <%= link_to "Inschrijven", "/#contact-section", class: "navbar-custom-item-extra" %>
-    </div>
-    </div>
+              <li>
+                <%= workshop["price_addition"] %>
+              </li>
+            <% end %>
+          </ul>
+          <%= link_to "Inschrijven", "/#contact-section", class: "navbar-custom-item-extra" %>
+        </div>
+      </div>
       <div class="col-xs-12 col-lg-9">
         <div class="main-info-container">
-            <%= partial workshop["partial"] %>
+          <%= partial workshop["partial"] %>
         </div>
       </div>
       <div class="visible-xs visible-md visible-sm">
-          <div class="side-info-container">
-
-        <ul>
+        <div class="side-info-container">
+          <ul>
             <% if workshop["type"] == "bootcamp" %>
-                <li class="bootcamp-banner">
-                    Bootcamp
-                </li>
+              <li class="bootcamp-banner">
+                Bootcamp
+              </li>
             <% end %>
             <li>
-                <h3>
-                    <%= workshop["name"] %>
-                </h3>
+              <h3>
+                <%= workshop["name"] %>
+              </h3>
             </li>
             <li>
-                <%= workshop["amount"] %> workshops
+              <%= workshop["amount"] %> workshops
             </li>
             <li>
-                <%= workshop["time"] %> uur per workshop
+              <%= workshop["time"] %> uur per workshop
             </li>
             <li>
-                Max. <%= workshop["max_amount"] %> kinderen
+              Max. <%= workshop["max_amount"] %> kinderen
             </li>
             <li>
-                <% if workshop["location_link"] %>
-                    <a href="<%= workshop["location_link"] %>" target="_blank">
-                        <%= workshop["location"] %>
-                    </a>
-                <% else %>
-                    <%= workshop["location"] %>
-                <% end %>
+              <% if workshop["location_link"] %>
+                <a href="<%= workshop["location_link"] %>" target="_blank">
+                  <%= workshop["location"] %> (tijdelijk online)
+                </a>
+              <% else %>
+                <%= workshop["location"] %> Online
+              <% end %>
             </li>
             <li>
-                <strong>
-                    <%= workshop["date"] %>
-                </strong>
+              <strong>
+                <%= workshop["date"] %>
+              </strong>
             </li>
-            
             <% if workshop["duration_1"] %>
-                <li>
-                    <%= workshop["duration_1"] %>
-                </li>
+              <li>
+                <%= workshop["duration_1"] %>
+              </li>
             <% end %>
             <% if workshop["duration_2"] %>
-                <li>
-                    <%= workshop["duration_2"] %>
-                </li>
+              <li>
+                <%= workshop["duration_2"] %>
+              </li>
             <% end %>
             <li>
-                <%= workshop["from_age"] %>
+              <%= workshop["from_age"] %>
             </li>
             <li class="workshop-price">
-                <%= workshop["price"] %>
+              <%= workshop["price"] %>
             </li>
             <% if workshop["price_addition"] %>
-                <li>
-                    <%= workshop["price_addition"] %>
-                </li>
-            <% end %>  
-        </ul>
-        <%= link_to "Inschrijven", "/#contact-section", class: "navbar-custom-item-extra" %>
-    </div>
+              <li>
+                <%= workshop["price_addition"] %>
+              </li>
+            <% end %>
+          </ul>
+          <%= link_to "Inschrijven", "/#contact-section", class: "navbar-custom-item-extra" %>
+        </div>
       </div>
     </div>
   </div>

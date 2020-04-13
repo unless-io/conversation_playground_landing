@@ -2,17 +2,7 @@
 title: The Conversation Playground - Home
 body_class: pages-home
 ---
-
-<div class="alert-temp">
-  <p>
-    Coronavirus: Alle Conversation Playground cursussen zijn nu volledig online. 
-    Wij zijn enthousiast over de nieuwe mogelijkheden die online workshops bieden, 
-    nog leerzamer en leuker leren!
-  </p>
-</div>
-
 <div id="dots-container"></div>
-
 <section class="default banner-wrapper" data-target="#mission">
   <div class="container section-content">
     <div class="row">
@@ -25,7 +15,8 @@ body_class: pages-home
         <div class="content-card left" id="in-banner">
           <div class="banner-content">
             <h1>
-              Engelse les, maar dan anders! <br> Zo spreekt uw kind vloeiender Engels
+              Engelse les, maar dan anders! <br>
+              Zo spreekt uw kind vloeiender Engels
             </h1>
             <div class="descending-paragraph-container">
               <p>
@@ -44,12 +35,11 @@ body_class: pages-home
     </div>
     <div class="button-next-container">
       <% link_to "#", class: "btn-next blue" do %>
-      <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-down"></i>
       <% end %>
     </div>
   </div>
 </section>
-
 <section class="default" id="video-section">
   <div class="container section-content">
     <div class="row">
@@ -57,10 +47,10 @@ body_class: pages-home
         <div class="illustration-wrapper">
           <iframe id="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/?listType=playlist&list=PL2tE70vZMIU-ymzrhoq2h8woSkQO9-8cx" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <% link_to "/#contact-section", class: 'navbar-custom-item-extra', "data-target" => "#contact-section" do %>
-          <span>
-            Ik ben geïnteresseerd
-          </span>
-          <i class="fas fa-chevron-right"></i>
+            <span>
+              Ik ben geïnteresseerd
+            </span>
+            <i class="fas fa-chevron-right"></i>
           <% end %>
         </div>
       </div>
@@ -79,13 +69,11 @@ body_class: pages-home
     </div>
     <div class="button-next-container">
       <% link_to "#", class: "btn-next blue" do %>
-      <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-down"></i>
       <% end %>
     </div>
   </div>
 </section>
-
-
 <section class="default" data-target="#mission" id="mission-section">
   <div class="container section-content">
     <div class="row">
@@ -113,12 +101,11 @@ body_class: pages-home
     </div>
     <div class="button-next-container">
       <% link_to "#", class: "btn-next blue" do %>
-      <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-down"></i>
       <% end %>
     </div>
   </div>
 </section>
-
 <section class="default" data-target="#what" id="what-section">
   <div class="container section-content">
     <div class="row">
@@ -151,12 +138,11 @@ body_class: pages-home
     </div>
     <div class="button-next-container">
       <% link_to "#", class: "btn-next blue" do %>
-      <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-down"></i>
       <% end %>
     </div>
   </div>
 </section>
-
 <section class="default" data-target="#program" id="program-section">
   <div class="container section-content">
     <div class="row">
@@ -170,13 +156,10 @@ body_class: pages-home
           <h2 class="text-left">
             De workshops
           </h2>
-
           <div class="text-left">
             <div class="cards-container">
-            
-              <% data.workshops.each do |workshop| %>       
-                  <% link_to "/workshops/#{workshop["slug"]}.html", class: 'workshop-card' do %>
-                  
+              <% data.workshops.each do |workshop| %>
+                <% link_to "/workshops/#{workshop["slug"]}.html", class: 'workshop-card' do %>
                   <% if workshop["type"] == "bootcamp" %>
                     <div class="bootcamp-banner">
                       <div class="text">
@@ -201,6 +184,12 @@ body_class: pages-home
                       <%= workshop["from_age"] %>
                     </p>
                     <p>
+                      <% if workshop["discount"] %>
+                        <strong>
+                          <%= workshop["discount"] %>
+                          <br>
+                        </strong>
+                      <% end %>
                       <%= workshop["price"] %>
                     </p>
                   </div>
@@ -210,7 +199,7 @@ body_class: pages-home
                       Tijdelijk online
                     </p>
                   </div>
-                  <% end %>
+                <% end %>
               <% end %>
             </div>
           </div>
@@ -219,13 +208,11 @@ body_class: pages-home
     </div>
     <div class="button-next-container">
       <% link_to "#", class: "btn-next blue" do %>
-      <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-down"></i>
       <% end %>
     </div>
   </div>
 </section>
-
-
 <section class="default" data-target="#team" id="team-section">
   <div class="container section-content">
     <div class="row">
@@ -242,29 +229,28 @@ body_class: pages-home
       <div class="col-xs-12 col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="row team-wrapper">
           <% data.team.each do |key, team_member| %>
-          <div class="col-xs-4 col-md-4 col-lg-4">
-            <% link_to "/team/#{key}.html", class: "team-card" do %>
-            <%= image_tag team_member["image_url"] %>
-            <h3>
-              <%= team_member["name"] %>
-            </h3>
-            <p>
-              <%= team_member["title"] %>
-            </p>
-            <% end %>
-          </div>
+            <div class="col-xs-4 col-md-4 col-lg-4">
+              <% link_to "/team/#{key}.html", class: "team-card" do %>
+                <%= image_tag team_member["image_url"] %>
+                <h3>
+                  <%= team_member["name"] %>
+                </h3>
+                <p>
+                  <%= team_member["title"] %>
+                </p>
+              <% end %>
+            </div>
           <% end %>
         </div>
       </div>
     </div>
     <div class="button-next-container">
       <% link_to "#", class: "btn-next blue" do %>
-      <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-down"></i>
       <% end %>
     </div>
   </div>
 </section>
-
 <section class="default" data-target="#testimonials" id="testimonials-section">
   <div class="container section-content">
     <div class="row">
@@ -276,38 +262,37 @@ body_class: pages-home
       <div class="col-xs-12 col-lg-12">
         <div class="testimonial-wrapper">
           <% data.testimonials.each_with_index do |testimonial, index| %>
-          <div class="testimonial-card<%= ' active' if index == 0 %>" data-target="#dot-<%= index %>" id="testimonial-<%= index %>">
-            <div class="testimonial-avatar">
-              <%= image_tag testimonial["image_url"] %>
-            </div>
-            <div class="testimonial-body">
-              <p>
-                “<%= testimonial["content"] %>”
-              </p>
-              <div class="testimonial-author">
-                <span>
-                  - <%= testimonial["author"] %>.
-                </span>
+            <div class="testimonial-card<%= ' active' if index == 0 %>" data-target="#dot-<%= index %>" id="testimonial-<%= index %>">
+              <div class="testimonial-avatar">
+                <%= image_tag testimonial["image_url"] %>
+              </div>
+              <div class="testimonial-body">
+                <p>
+                  “<%= testimonial["content"] %>”
+                </p>
+                <div class="testimonial-author">
+                  <span>
+                    - <%= testimonial["author"] %>.
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
           <% end %>
         </div>
         <div class="testimonial-dots">
           <% data.testimonials.length.times do |index| %>
-          <a href="#" class="testimonial-dot<%= ' active' if index == 0 %>" id="dot-<%= index %>" data-target="#testimonial-<%= index %>"></a>
+            <a href="#" class="testimonial-dot<%= ' active' if index == 0 %>" id="dot-<%= index %>" data-target="#testimonial-<%= index %>"></a>
           <% end %>
         </div>
       </div>
     </div>
     <div class="button-next-container">
       <% link_to "#", class: "btn-next blue" do %>
-      <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-down"></i>
       <% end %>
     </div>
   </div>
 </section>
-
 <section class="default" data-target="#contact" id="contact-section">
   <div class="container section-content">
     <div class="row">
@@ -326,21 +311,17 @@ body_class: pages-home
           <form action="https://formspree.io/info@theconversationplayground.nl" method="POST" class="contact-form">
             <div class="form-left">
               <label for="name">
-
               </label>
               <input type="text" name="name" id="name" placeholder="Naam" required>
               <label for="email">
-
               </label>
               <input type="email" name="_replyto" placeholder="Email" required>
               <label for="school">
-
               </label>
               <input type="text" name="school" placeholder="School naam & stad">
             </div>
             <div class="form-right">
               <label for="content">
-
               </label>
               <textarea name="content" id="content" cols="30" rows="10" placeholder="Hi!" required></textarea>
               <input type="submit" class="btn-brand" value="Verstuur">
@@ -351,12 +332,11 @@ body_class: pages-home
     </div>
   </div>
 </section>
-
 <% content_for :after_js do %>
-<script>
-  scrollToSection();
-  scrollDots();
-  activateNav();
-  scrollTestimonials();
-</script>
+  <script>
+    scrollToSection();
+    scrollDots();
+    activateNav();
+    scrollTestimonials();
+  </script>
 <% end %>

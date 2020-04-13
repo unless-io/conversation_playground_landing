@@ -72,6 +72,12 @@ title: The Conversation Playground - Workshops
               <%= workshop["from_age"] %>
             </li>
             <li class="workshop-price">
+              <% if workshop["discount"] %>
+                <strong>
+                  <%= workshop["discount"] %>
+                  <br>
+                </strong>
+              <% end %>
               <%= workshop["price"] %>
             </li>
             <% if workshop["price_addition"] %>
@@ -138,6 +144,12 @@ title: The Conversation Playground - Workshops
               <%= workshop["from_age"] %>
             </li>
             <li class="workshop-price">
+              <% if workshop["discount"] %>
+                <strong>
+                  <%= workshop["discount"] %>
+                  <br>
+                </strong>
+              <% end %>
               <%= workshop["price"] %>
             </li>
             <% if workshop["price_addition"] %>

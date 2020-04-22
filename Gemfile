@@ -11,3 +11,5 @@ gem 'pry-byebug', require: true
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-middleman'
 gem 'middleman-livereload'
+
+# THIS COMMENTS IS FOR TESTING PURPOSES

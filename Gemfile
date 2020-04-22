@@ -8,7 +8,7 @@ gem 'middleman-deploy', git: 'https://github.com/lewagon/middleman-deploy.git'
 gem 'pry-byebug', require: true
 
 # Assets
-gem 'bootstrap-sass', '~> 3.3.7'
+gem 'bootstrap-sass', '~> 3.4.1'
 gem 'jquery-middleman'
 gem 'middleman-livereload'
 

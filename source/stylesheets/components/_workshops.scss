@@ -49,7 +49,8 @@
 }
 
 .side-info-container .navbar-custom-item-extra {
-  display: block;
+  display: flex;
+  justify-content: space-between;
 }
 
 .main-info-container h1 {

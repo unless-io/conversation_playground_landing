@@ -92,18 +92,38 @@
 </p>
 <p>
   Ons uitgangspunt is dat de kinderen al basiskennis van 
-  Engels bezitten en willen leren vloeiender te spreken. We bouwen voort 
-  op wat de kinderen op school en van social media, YouTube, gaming en 
-  televisie al hebben geleerd. <strong>Deze cursus is niet geschikt voor kinderen 
-    die geen Engels verstaan.</strong>
+  Engels bezitten en willen leren vloeiender te spreken. 
+  <!-- AShergill 31-MNay-2020: inserted a link to a placement test -->
+  <br>
+  Controleer de niveau van uw kind via deze leuk placement test: 
+  <br>
+  <br>
+        <% link_to "https://quizizz.com/join/quiz/5e995d6ba0907f001eea72bd/start?from=soloLinkShare&referrer=5e4fb7ca404b64001b23296e", class: 'navbar-custom-item-extra', target: "_blank" do %>
+           <span>
+             Niveau bepalen
+           </span>
+           <i class="fas fa-chevron-right"></i>
+        <% end %>
+  <br>
+  <br>
+  Als uw kind boven 40% scoort, heeft uw kind voldoende kennis van engels om mee te doen.
 </p>
+<!-- AShergill 31-MNay-2020: small content adjustments -->
+<br>
 <h3>
-  Nog niet beschikbaar op uw school?
+  Cursus nog niet beschikbaar op uw school?
 </h3>
 <p>
   Bent u een ouder of docent en heeft u interesse in de workshops? 
   Neem dan contact op via de onderstaande knop.
 </p>
 <p class="visible-lg">
-  <%= link_to "Ik ben geïnteresseerd", "/#contact-section", class: "navbar-custom-item-extra" %>
+  <!-- AShergill 31-May-2020: put in a button with a chevron
+  <%= link_to "Ik ben geïnteresseerd", "/#contact-section", class: "navbar-custom-item-extra" %> -->
+  <% link_to "/#contact-section", class: 'navbar-custom-item-extra', "data-target" => "#contact-section" do %>
+     <span>
+       Ik ben geïnteresseerd
+     </span>
+    <i class="fas fa-chevron-right"></i>
+  <% end %>
 </p>

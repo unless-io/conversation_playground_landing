@@ -86,8 +86,14 @@ title: The Conversation Playground - Workshops
               </li>
             <% end %>
           </ul>
-          <%= link_to "Inschrijven", "/#contact-section", class: "navbar-custom-item-extra" %>
-        </div>
+          <!-- AShergill 31-May-2020: put in a button with a chevron -->
+          <% link_to "/#contact-section", class: 'navbar-custom-item-extra', "data-target" => "#contact-section" do %>
+             <span>
+               Inschrijven
+             </span>
+             <i class="fas fa-chevron-right"></i>
+          <% end %>
+      </div>
       </div>
       <div class="col-xs-12 col-lg-9">
         <div class="main-info-container">
@@ -158,7 +164,13 @@ title: The Conversation Playground - Workshops
               </li>
             <% end %>
           </ul>
-          <%= link_to "Inschrijven", "/#contact-section", class: "navbar-custom-item-extra" %>
+          <!-- AShergill 31-May-2020: put in a button with a chevron -->
+          <% link_to "/#contact-section", class: 'navbar-custom-item-extra', "data-target" => "#contact-section" do %>
+             <span>
+               Inschrijven
+             </span>
+             <i class="fas fa-chevron-right"></i>
+          <% end %>
         </div>
       </div>
     </div>

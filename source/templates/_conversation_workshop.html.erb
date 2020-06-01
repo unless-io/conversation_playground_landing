@@ -16,7 +16,14 @@
       Op woensdag 24 juni om 13:00 online via Zoom.
     </p>
     <p>
-      <%= link_to "Aanmelden", "/#contact-section", class: "navbar-custom-item-extra" %>
+      <!-- AShergill 31-May-2020: put in a button with a chevron
+      <%= link_to "Aanmelden", "/#contact-section", class: "navbar-custom-item-extra" %> -->
+        <% link_to "/#contact-section", class: 'navbar-custom-item-extra', "data-target" => "#contact-section" do %>
+           <span>
+             Aanmelden
+           </span>
+           <i class="fas fa-chevron-right"></i>
+        <% end %>
     </p>
     <p>
       <br>
@@ -115,10 +122,20 @@
   <strong>Vereisten</strong>
 </p>
 <p>
-  De doel groep voor deze cursus is kinderen van 10 t/m 14 jaar.
+  De doel groep voor deze cursus is kinderen van 10 t/m 14 jaar dat al basiskennis van Engels bezitten.
 </p>
+<!-- AShergill 31-MNay-2020: inserted a link to a placement test -->
 <p>
-  Ons uitgangspunt is dat de kinderen al basiskennis van Engels bezitten en willen leren vloeiender 
-  te spreken. We bouwen voort op wat de kinderen op school en van social media, YouTube, gaming en 
-  televisie al hebben geleerd. <strong>Deze cursus is niet geschikt voor kinderen die geen Engels verstaan.</strong>
+  Controleer de niveau van uw kind via deze leuk placement test: 
+  <br>
+  <br>
+        <% link_to "https://quizizz.com/join/quiz/5e995d6ba0907f001eea72bd/start?from=soloLinkShare&referrer=5e4fb7ca404b64001b23296e", class: 'navbar-custom-item-extra', target: "_blank" do %>
+           <span>
+             Niveau bepalen
+           </span>
+           <i class="fas fa-chevron-right"></i>
+        <% end %>
+  <br>
+  <br>
+  Als uw kind boven 40% scoort, heeft uw kind voldoende kennis van engels om mee te doen.
 </p>

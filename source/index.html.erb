@@ -147,16 +147,30 @@ body_class: pages-home
 <section class="default" data-target="#program" id="program-section">
   <div class="container section-content">
     <div class="row">
+<!-- AShergill 11-June-2020: removal of picture>
       <div class="col-xs-12 col-lg-6 col-lg-push-6">
         <div class="illustration-wrapper">
           <%= image_tag 'programme.png' %>
         </div>
       </div>
-      <div class="col-xs-12 col-lg-6 col-lg-pull-6">
-        <div class="content-card left">
-          <h2 class="text-left">
+      <div class="col-xs-12 col-lg-6 col-lg-pull-6"> 
+      Changed to col-xs-12 to get rid of the illustration and put in three cards across the row-->
+      <div class="col-xs-12">
+        <h2 class="testimonial-center text-center">
             De workshops
-          </h2>
+        </h2>
+          <!-- AShergill 15-June-2020: Corona update -->
+          <div class="col-xs-12 col-lg-8 col-lg-offset-2">
+            <p class="team-center corona-notice">
+              <% data.corona.each do |corona| %>
+                <%= corona["notice"] %>
+              <% end %>
+            </p>
+          </div>
+      </div>
+      <div class="col-xs-12">
+        <div class="content-card left">
+          <!-- moved the heading to the centre because of removal of illustration -->
           <div class="text-left">
             <div class="cards-container">
               <% data.workshops.each do |workshop| %>
@@ -179,7 +193,12 @@ body_class: pages-home
                       <%= workshop["amount"] %> workshop<%= workshop["amount"].to_i > 1 ? 's' : '' %>
                     </p>
                     <p>
-                      Maximaal <%= workshop["max_amount"] %> kinderen
+                      <!-- AShergill 10-June-2020 taking adult course into account -->
+                      <% if workshop["type"] == "adult" %>
+                        Maximaal <%= workshop["max_amount"] %> deelnemers
+                      <% else %>
+                        Maximaal <%= workshop["max_amount"] %> kinderen
+                      <% end %>
                     </p>
                     <p>
                       <%= workshop["from_age"] %>
@@ -191,14 +210,18 @@ body_class: pages-home
                           <br>
                         </strong>
                       <% end %>
-                      <%= workshop["price"] %>
+                      <br>
                     </p>
                   </div>
                   <span>Lees meer</span>
                   <div class="card-footer">
+                    <!-- AShergill 12-June-2020: removed the tijdelijk online but kept the footer
+                          and put in the price of the course 
                     <p>
                       Tijdelijk online
                     </p>
+                    -->
+                    <%= workshop["price"] %>
                   </div>
                 <% end %>
               <% end %>

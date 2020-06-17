@@ -43,7 +43,7 @@ title: The Conversation Playground - Workshops
             </li>
             <li>
               <!-- AShergill 10-June-2020 taking adult classes into account -->
-              <% if workshop["type"] == "teacher" %>
+              <% if workshop["type"] == "adult" %>
                 Max. <%= workshop["max_amount"] %> deelnemers
               <% else %>
                 Max. <%= workshop["max_amount"] %> kinderen
@@ -126,7 +126,7 @@ title: The Conversation Playground - Workshops
             </li>
             <li>
               <!-- AShergill 10-June-2020 taking adult course into account -->
-              <% if workshop["type"] == "teacher" %>
+              <% if workshop["type"] == "adult" %>
                 Max. <%= workshop["max_amount"] %> deelnemers
               <% else %>
                 Max. <%= workshop["max_amount"] %> kinderen

@@ -124,6 +124,14 @@ section.blue {
   }
 }
 
+/* AShergill 15-June-2020: added corona notice */
+.corona-notice
+{
+  border: $blue 5px solid;
+  border-radius: 10px;
+  padding: 10px;
+}
+
 @media (max-width: 768px) {
   section.default {
     min-height: 100vh;

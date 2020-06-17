@@ -29,9 +29,13 @@
 .navbar-custom-item {
   font-weight: 600;
   color: $blue;
+  /* AShergill 13-June-2020: added the underline for hover over and the transition to 
+    smoothen it out */
+  transition: 200ms;  
   &:hover, &:active, &:visited, &:focus {
     text-decoration: none;
     color: $blue;
+    border-bottom: 6px solid $red;
   }
 }
 

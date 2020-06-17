@@ -42,7 +42,12 @@ title: The Conversation Playground - Workshops
               <%= workshop["time"] %> uur per workshop
             </li>
             <li>
-              Max. <%= workshop["max_amount"] %> kinderen
+              <!-- AShergill 10-June-2020 taking adult classes into account -->
+              <% if workshop["type"] == "adult" %>
+                Max. <%= workshop["max_amount"] %> deelnemers
+              <% else %>
+                Max. <%= workshop["max_amount"] %> kinderen
+              <% end %>
             </li>
             <li>
               <strong>
@@ -62,10 +67,10 @@ title: The Conversation Playground - Workshops
             <li>
               <% if workshop["location_link"] %>
                 <a href="<%= workshop["location_link"] %>" target="_blank">
-                  <%= workshop["location"] %> (tijdelijk online)
+                  <%= workshop["location"] %> 
                 </a>
               <% else %>
-                <%= workshop["location"] %> Online
+                <%= workshop["location"] %> 
               <% end %>
             </li>
             <li>
@@ -120,15 +125,20 @@ title: The Conversation Playground - Workshops
               <%= workshop["time"] %> uur per workshop
             </li>
             <li>
-              Max. <%= workshop["max_amount"] %> kinderen
+              <!-- AShergill 10-June-2020 taking adult course into account -->
+              <% if workshop["type"] == "adult" %>
+                Max. <%= workshop["max_amount"] %> deelnemers
+              <% else %>
+                Max. <%= workshop["max_amount"] %> kinderen
+              <% end %>
             </li>
             <li>
               <% if workshop["location_link"] %>
                 <a href="<%= workshop["location_link"] %>" target="_blank">
-                  <%= workshop["location"] %> (tijdelijk online)
+                  <%= workshop["location"] %> 
                 </a>
               <% else %>
-                <%= workshop["location"] %> Online
+                <%= workshop["location"] %> 
               <% end %>
             </li>
             <li>

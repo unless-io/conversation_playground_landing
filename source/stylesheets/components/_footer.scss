@@ -1,3 +1,4 @@
+
 footer {
   min-height: 180px;
   width: 100vw;
@@ -5,14 +6,24 @@ footer {
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
+ 
+  /*AShergill 20-June-2020: added code to make sure the footer is spread out across whole
+  screen at all times... even on a smal screen */
+  .container{
+    width: 100%;
+  }
+
   .logo-wrapper {
     display: flex;
     justify-content: flex-end;
+
     img {
       width: 150px;
     }
   }
+
+  
 
   .social-media {
     a {
@@ -26,7 +37,7 @@ footer {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
   }
   li {
     font-size: 14px;
@@ -45,6 +56,7 @@ footer {
       color: white;
     }
   }
+
 }
 
 footer .copyright {
@@ -75,27 +87,4 @@ footer .credits {
   }
 }
 
-@media (max-width: 500px) {
-  footer { 
-    ul {
-      margin-top: 20px;
-      li {
-        margin-bottom: 10px;
-      }
-    }
-    .logo-wrapper {
-      justify-content: flex-start;
-      img {
-        margin-left: -20px;
-      }
-    }
-  }
-}
 
-
-@media (min-width: 768px) {
-  footer .logo-wrapper img {
-    margin-right: -50px;
-
-  }
-}

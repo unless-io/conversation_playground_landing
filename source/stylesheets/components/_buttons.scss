@@ -5,10 +5,15 @@
   margin: 10px 0;
   display: inline-block;
   border: none;
+  /*AShergill 21-June-2020: hover over causes button to darken*/
+  transition: .5s;
   &:hover, &:active, &:visited, &:focus {
     text-decoration: none;
     color: white;
+    font-weight: 515;
+    background-color: #1ea4c9;
   }
+
 }
 
 .bubble-button-blue {
@@ -72,9 +77,11 @@
   align-items: center;
   color: $blue;
   text-decoration: none;
+  transition: 1s;
   &:hover, &:active, &:visited, &:focus {
     text-decoration: none;
     color: $blue;
+    transform: translate(-0.5em);
   }
   .btn-previous {
     margin-right: 10px;

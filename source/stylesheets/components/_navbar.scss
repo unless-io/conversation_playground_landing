@@ -13,6 +13,17 @@
   align-items: center;
 }
 
+/* AShergill 22-June-2020: move the right chevron down slightly because it's not aligned with
+   the text just for these two buttons*/
+.inschrijven-chev{
+  padding-top: 5px;
+}
+
+.workshop-max-width{
+  width: 170px;
+}
+
+
 .navbar-custom-center li {
   display: inline-block;
   padding: 0 20px;
@@ -51,11 +62,28 @@
   color: white;
   border: 2px solid $red;
   padding: 5px 10px;
+  transition: .5s;
+  /* AShergill 21-June-2020: added class to move chevrons when hover over*/
+  .chev-r
+  {
+    transition: .7s;
+  }
+
   &:hover, &:active, &:visited, &:focus {
     text-decoration: none;
     color: white;
+    .chev-r{
+      transform: translate(0.3em);
+    } 
+ 
+    &:hover{
+      background-color: #e43353;
+      border: 2px solid #e43353;
+    }
   }
 }
+
+
 
 #sticky-nav.hidden-up {
   top: -66px;
@@ -86,7 +114,6 @@
     width: 150px;
   }
 }
-
 
 @media (min-width: 768px) {
   .navbar-custom .logo img {

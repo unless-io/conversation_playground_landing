@@ -14,16 +14,10 @@ footer {
     width: 100%;
   }
 
+  /*AShergill 24-June-2020: only display the logo on larger screens */
   .logo-wrapper {
-    display: flex;
-    justify-content: flex-end;
-
-    img {
-      width: 150px;
-    }
+    display: none;
   }
-
-  
 
   .social-media {
     a {
@@ -87,4 +81,14 @@ footer .credits {
   }
 }
 
+/*AShergill 24-June-2020: only display the logo on larger screens */
+@media (min-width: 700px){
+  footer .logo-wrapper {
+    display: flex;
+    justify-content: flex-end;
 
+    img {
+      width: 150px;
+    }
+  }
+}

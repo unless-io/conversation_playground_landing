@@ -1,7 +1,38 @@
 ---
-title: The Conversation Playground - Home
+title: Home | The Conversation Playground
 body_class: pages-home
 ---
+<% content_for :head do %>
+  <% data.seo.each do |seo| %>  
+    <% if seo["page"] == "Home" %>
+      <title><%= seo["title"] %></title>
+      <meta name="description"           content="<%= seo["description"] %>" />
+      <!-- Microdata -->
+      <meta itemprop="name"              content="<%= seo["title"] %>" />
+      <meta itemprop="description"       content="<%= seo["description"] %>" />
+      <meta itemprop="image"             content="<%= "#{seo["base_url"]}#{image_path seo["image"]}" %>" />
+
+      <!-- Facebook Open Graph data -->
+      <meta property="og:site_name"      content="The Conversation Playground" />
+      <meta property="og:title"          content="<%= seo["title"] %>" />
+      <meta property="og:description"    content="<%= seo["description"] %>" />
+      <meta property="og:image"          content="<%= "#{seo["base_url"]}#{image_path seo["image"]}" %>" />
+      <meta property="og:type"           content="Website" />
+      <meta property="og:url"            content="<%= seo["url"] %>" />
+
+      <!-- Google+ -->
+      <meta itemprop="name"              content="<%= seo["title"] %>" />
+      <meta itemprop="description"       content="<%= seo["description"] %>" />
+      <meta itemprop="image"             content="<%= "#{seo["base_url"]}#{image_path seo["image"]}" %>" />
+
+      <!-- Twitter Card data -->
+      <meta name="twitter:card"          content="summary_large_image" />
+      <meta name="twitter:title"         content="<%= seo["title"] %>" />
+      <meta name="twitter:description"   content="<%= seo["description"] %>" />
+      <meta name="twitter:image:src"     content="<%= "#{seo["base_url"]}#{image_path seo["image"]}" %>" />
+    <% end %>
+  <% end %>
+<% end %>
 <div id="dots-container"></div>
 <section class="default banner-wrapper" data-target="#mission">
   <div class="container section-content">
@@ -45,7 +76,6 @@ body_class: pages-home
     <div class="row">
       <div class="col-xs-12 col-lg-6">
         <div class="illustration-wrapper">
-          <!-- AShergill 31-May-2020: embed new video-->
           <iframe id="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/zp7TmPtqiw0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <% link_to "/#contact-section", class: 'navbar-custom-item-extra', "data-target" => "#contact-section" do %>
             <span>
@@ -86,7 +116,7 @@ body_class: pages-home
       <div class="col-xs-12 col-lg-6 col-lg-pull-6">
         <div class="content-card left">
           <h2 class="text-left">
-            Goed voorbereid op de toekomst
+            Engels voor de toekomst
           </h2>
           <p class="text-left">
             In onze globaliserende wereld is het van steeds groter belang de Engelse taal al op jonge leeftijd te leren beheersen.
@@ -118,7 +148,7 @@ body_class: pages-home
       <div class="col-xs-12 col-lg-6">
         <div class="content-card right">
           <h2>
-            Gericht op praten
+            Gericht op je Engelse spreekvaardigheid
           </h2>
           <p>
             Onze Engelse docenten zijn uitgerust met een breed scala aan interactieve spellen waarmee de kinderen helemaal op kunnen gaan in de Engelse taal.
@@ -147,19 +177,10 @@ body_class: pages-home
 <section class="default" data-target="#program" id="program-section">
   <div class="container section-content">
     <div class="row">
-<!-- AShergill 11-June-2020: removal of picture>
-      <div class="col-xs-12 col-lg-6 col-lg-push-6">
-        <div class="illustration-wrapper">
-          <%= image_tag 'programme.png' %>
-        </div>
-      </div>
-      <div class="col-xs-12 col-lg-6 col-lg-pull-6"> 
-      Changed to col-xs-12 to get rid of the illustration and put in three cards across the row-->
       <div class="col-xs-12">
         <h2 class="testimonial-center text-center">
-            De workshops
+            De Workshops
         </h2>
-          <!-- AShergill 15-June-2020: Corona update -->
           <div class="col-xs-12 col-lg-8 col-lg-offset-2">
             <p class="team-center corona-notice">
               <% data.corona.each do |corona| %>
@@ -174,7 +195,7 @@ body_class: pages-home
           <div class="text-left">
             <div class="cards-container">
               <% data.workshops.each do |workshop| %>
-                <% link_to "/workshops/#{workshop["slug"]}.html", class: 'workshop-card' do %>
+                <% link_to "/cursus/#{workshop["slug"]}.html", class: 'workshop-card' do %>
                   <% if workshop["type"] == "bootcamp" %>
                     <div class="bootcamp-banner">
                       <div class="text">
@@ -193,7 +214,6 @@ body_class: pages-home
                       <%= workshop["amount"] %> workshop<%= workshop["amount"].to_i > 1 ? 's' : '' %>
                     </p>
                     <p>
-                      <!-- AShergill 10-June-2020 taking adult course into account -->
                       <% if workshop["type"] == "adult" %>
                         Maximaal <%= workshop["max_amount"] %> deelnemers
                       <% else %>
@@ -215,12 +235,6 @@ body_class: pages-home
                   </div>
                   <span>Lees meer</span>
                   <div class="card-footer">
-                    <!-- AShergill 12-June-2020: removed the tijdelijk online but kept the footer
-                          and put in the price of the course 
-                    <p>
-                      Tijdelijk online
-                    </p>
-                    -->
                     <%= workshop["price"] %>
                   </div>
                 <% end %>

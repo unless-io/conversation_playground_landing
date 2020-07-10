@@ -23,7 +23,6 @@
 .workshop-illustration {
   margin: 0 auto;
   display: block;
-  /*AShergill 24-June-2020: illustration width set to small for small screens */
   width: 300px;
 }
 
@@ -57,10 +56,17 @@
 
 .main-info-container h1 {
   margin-top: 0;
+  font-size: 2.2rem;
+  opacity: 0.5;
 }
 
 .main-info-container h3 {
   opacity: 0.5;
+}
+
+.main-info-container h2 {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .workshop-price {
@@ -74,6 +80,10 @@
   .workshop-illustration {
     width: 400px;
   }
+  .main-info-container h1 {
+    font-size: 4rem;
+  }
+  
 }
 
 @media (min-width: 900px) {

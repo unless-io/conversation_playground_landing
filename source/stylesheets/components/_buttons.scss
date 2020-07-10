@@ -5,7 +5,6 @@
   margin: 10px 0;
   display: inline-block;
   border: none;
-  /*AShergill 21-June-2020: hover over causes button to darken*/
   transition: .5s;
   &:hover, &:active, &:visited, &:focus {
     text-decoration: none;

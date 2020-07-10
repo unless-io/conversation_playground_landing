@@ -1,6 +1,3 @@
----
-title: The Conversation Playground - Workshops
----
 <div class="team-bio-wrapper">
   <div class="container">
     <div class="row">
@@ -42,7 +39,6 @@ title: The Conversation Playground - Workshops
               <%= workshop["time"] %> uur per workshop
             </li>
             <li>
-              <!-- AShergill 10-June-2020 taking adult classes into account -->
               <% if workshop["type"] == "adult" %>
                 Max. <%= workshop["max_amount"] %> deelnemers
               <% else %>
@@ -91,12 +87,10 @@ title: The Conversation Playground - Workshops
               </li>
             <% end %>
           </ul>
-          <!-- AShergill 31-May-2020: put in a button with a chevron -->
           <% link_to "/#contact-section", class: 'navbar-custom-item-extra workshop-max-width', "data-target" => "#contact-section" do %>
              <span>
                Inschrijven
              </span>
-             <!-- AShergill 21-June-2020: added the id to move the chevron when hover over button -->
              <i class="fas fa-chevron-right chev-r inschrijven-chev"></i>
           <% end %>
       </div>
@@ -126,7 +120,6 @@ title: The Conversation Playground - Workshops
               <%= workshop["time"] %> uur per workshop
             </li>
             <li>
-              <!-- AShergill 10-June-2020 taking adult course into account -->
               <% if workshop["type"] == "adult" %>
                 Max. <%= workshop["max_amount"] %> deelnemers
               <% else %>
@@ -175,7 +168,6 @@ title: The Conversation Playground - Workshops
               </li>
             <% end %>
           </ul>
-          <!-- AShergill 31-May-2020: put in a button with a chevron -->
           <% link_to "/#contact-section", class: 'navbar-custom-item-extra workshop-max-width', "data-target" => "#contact-section" do %>
              <span>
                Inschrijven

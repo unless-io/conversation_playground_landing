@@ -9,7 +9,7 @@ data.team.each do |key, team_member|
 end
 
 data.workshops.each do |workshop|
-  proxy "/workshops/#{workshop["slug"]}.html", "/templates/workshop.html", locals: { workshop: workshop }
+  proxy "/cursus/#{workshop["slug"]}.html", "/templates/workshop.html", locals: { workshop: workshop }
 end
 
 ignore "/templates/show.html.erb"

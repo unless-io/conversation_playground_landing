@@ -95,6 +95,10 @@
   color: $blue;
 }
 
+.activeAccordion + .panel {
+  max-height: 1000px;
+}
+
 /* Style the accordion panel. Note: hidden by default */
 .panel {
   margin-top: 7px;
@@ -102,7 +106,7 @@
   background-color: white;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 800ms ease;
 }
 
 .accordion:after {

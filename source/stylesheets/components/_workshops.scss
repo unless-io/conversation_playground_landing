@@ -97,7 +97,7 @@
 
 .activeAccordion + .panel {
   // max-height: 500px;
-  display: block;
+  // display: block;
 }
 
 /* Style the accordion panel. Note: hidden by default */
@@ -107,9 +107,9 @@
   background-color: white;
   // max-height: 0;
   overflow: hidden;
-  display: none;
+  // display: none;
   max-height: 0;
-  transition: max-height 800ms ease;
+  transition: max-height 0.2s ease-out;
 }
 
 .accordion:after {

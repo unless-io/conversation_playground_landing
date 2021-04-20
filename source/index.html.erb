@@ -266,8 +266,8 @@ body_class: pages-home
       </div>
       <div class="col-xs-12 col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="row team-wrapper">
-          <% data.team.each do |key, team_member| %>
-            <div class="col-xs-4 col-md-4 col-lg-4">
+          <% data.team.each_with_index do |(key, team_member), index| %>
+            <div class="col-xs-4 col-md-4 col-lg-4 <%= index == 3 ? 'col-xs-offset-4' : '' %>">
               <% link_to "/team/#{key}.html", class: "team-card" do %>
                 <%= image_tag team_member["image_url"] %>
                 <h3>
